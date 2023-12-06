@@ -1,7 +1,10 @@
 :root {
   --white: white;
   --black: #000;
-  --bg-bleu: linear-gradient(90deg, #072038 0%, #0A355F 100%); }
+  --dark-blue: #072038;
+  --bg-bleu: linear-gradient(90deg, #072038 0%, #0A355F 100%);
+  --bleu-ciel: #26C1D9;
+  --saumon: #FD7762; }
 
 @font-face {
   font-family: 'Porpora';
@@ -53,6 +56,61 @@
     display: block; }
   .container-navigation {
     display: none; } }
+
+.hero {
+  margin: 0 5rem; }
+  .hero .hero-container {
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7rem auto; }
+    .hero .hero-container .left-talk {
+      border: 1px solid yellow;
+      flex-basis: 55%;
+      width: 100%; }
+      .hero .hero-container .left-talk h2 {
+        font-size: 72px;
+        font-weight: 600;
+        margin-right: 5rem; }
+        .hero .hero-container .left-talk h2 span {
+          color: var(--bleu-ciel); }
+      .hero .hero-container .left-talk h1 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-right: 5rem;
+        margin-bottom: 3rem; }
+      .hero .hero-container .left-talk .logos-entreprises {
+        border: 1px solid green;
+        justify-content: space-between;
+        display: flex;
+        margin-top: 3rem; }
+      .hero .hero-container .left-talk a {
+        border: 1px solid purple;
+        text-decoration: none;
+        color: var(--dark-blue);
+        background: var(--saumon);
+        border-radius: 30px;
+        padding: 13px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase; }
+    .hero .hero-container .right-talk {
+      flex-basis: 45%;
+      width: 100%;
+      border: 1px solid green; }
+      .hero .hero-container .right-talk img {
+        width: 100%; }
+  .hero .data-cloud {
+    display: flex;
+    border: 1px solid pink;
+    justify-content: center;
+    margin-bottom: 2rem; }
+  .hero .shape-divider {
+    display: flex;
+    border: 1px solid red;
+    justify-content: center; }
 
 * {
   box-sizing: border-box; }
