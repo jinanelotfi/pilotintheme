@@ -110,7 +110,61 @@
   .hero .shape-divider {
     display: flex;
     border: 1px solid red;
-    justify-content: center; }
+    justify-content: center;
+    margin: -1px; }
+
+.section-two-container {
+  background: var(--white);
+  color: var(--dark-blue); }
+  .section-two-container .text-container {
+    padding: 4rem 11rem 20rem;
+    display: flex;
+    border: 1px solid blue;
+    align-items: flex-start; }
+    .section-two-container .text-container .left-title {
+      flex-basis: 50%;
+      width: 100%;
+      border: 1px solid green; }
+      .section-two-container .text-container .left-title h2 {
+        font-size: 60px;
+        font-weight: 600;
+        margin: 0; }
+    .section-two-container .text-container .right-text {
+      flex-basis: 50%;
+      width: 100%;
+      border: 1px solid black; }
+      .section-two-container .text-container .right-text p {
+        margin: 0 0 3rem;
+        font-size: 18px; }
+      .section-two-container .text-container .right-text a {
+        border: 1px solid purple;
+        text-decoration: none;
+        color: var(--dark-blue);
+        background: var(--bleu-ciel);
+        border-radius: 30px;
+        padding: 13px 20px;
+        font-size: 18px;
+        font-weight: 600; }
+  .section-two-container .image-between-sections {
+    padding: 0 11rem;
+    border: 1px solid red;
+    position: absolute;
+    margin-top: -14rem; }
+    .section-two-container .image-between-sections img {
+      width: 100%; }
+  .section-two-container .parallaxe-duo-color {
+    position: absolute;
+    top: 96rem;
+    right: 0; }
+
+.section-three-container {
+  margin-top: 15rem; }
+  .section-three-container h2 {
+    padding: 2rem 11rem;
+    text-align: center;
+    font-size: 60px; }
+    .section-three-container h2 span {
+      color: var(--bleu-ciel); }
 
 * {
   box-sizing: border-box; }
