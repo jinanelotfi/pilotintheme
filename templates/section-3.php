@@ -1,6 +1,8 @@
 <h2>
     How we help tackle these <span>challenges</span>?
 </h2>
+
+<!-- First card -->
 <div class="first-white-container">
     <div class="left-data-connexion-image">
         <img class="datafactory-image" src="<?php echo get_template_directory_uri() . '/assets/images/datafactory.png'; ?>" alt="image data connexions">
@@ -9,7 +11,7 @@
     <div class="right-data-connexion">
         <div class="title-factory">
             <span>
-                <i class="fa-solid fa-chart-line"></i>
+                <img class="chart-line-icon" src="<?php echo get_template_directory_uri() . '/assets/images/chart-line-up.png'; ?>" alt="image graphique icone">
                 <h3>Datafactory</h3>
             </span>
             <span>
@@ -18,55 +20,62 @@
         </div>
         <div class="list-icones-factory">
             <span>
-                <i class="fa-solid fa-chart-line"></i>
+                <img class="sheet-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i1.png'; ?>" alt="icone feuille">
                 <h2>Manage and orchestrate</h2>
             </span>
             <span>
-                <i class="fa-solid fa-chart-line"></i>
+                <img class="cadenas-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i2.png'; ?>" alt="icone cadenas">
                 <h2>Dispatch powerd elements</h2>
             </span>
             <span>
-                <i class="fa-solid fa-chart-line"></i>
+                <img class="fromage-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i3.png'; ?>" alt="icone fromage">
                 <h2>Manage and orchestrats</h2>
             </span>
             <span>
-                <i class="fa-solid fa-chart-line"></i>
+                <img class="sheet-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i1.png'; ?>" alt="icone feuille">
                 <h2>Manage and orchestrats</h2>
             </span>
         </div>
-        <button>Découvrir la solution</button>              
+
+        <a href="#">Découvrir la solution</a>            
         
     </div>
 </div>
 
+<!-- Second card -->
+
 <div class="second-white-container">
-    <div class="left-propilot-container">
-        <div class="propilot">
+    <div class="right-data-connexion">
+        <div class="title-factory">
             <span>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Propilot</h2>
-            </span>
-            <p>Plan, do, check and align all your strategic plans in one single platform designed and built for modern and efficient organizations. No more spreadsheets sent via emails or time wasted for reconciliation. Focus on what really matters, achieving your goals. </p>
-        </div>
-        <div class="list-icones-propilot">
-            <span>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Connect strategic plans to execution</h2>
+                <img class="chart-line-icon" src="<?php echo get_template_directory_uri() . '/assets/images/chart-line-up.png'; ?>" alt="image graphique icone">
+                <h3>Datafactory</h3>
             </span>
             <span>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Know the status of plans </h2>
-            </span>
-            <span>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Adapt quickly to changes</h2>
-            </span>
-            <span>
-                <i class="fa-solid fa-chart-line"></i>
-                <h2>Reward real achiviers</h2>
+                <p>Build your next generation data warehouse automation platform with its unique low-code/no-code approach. Accelerate your business today and generate untapped value from your organization's data.</p>
             </span>
         </div>
-        <button>Learn more about ProPilot</button>
+        <div class="list-icones-factory">
+            <span>
+                <img class="sheet-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i1.png'; ?>" alt="icone feuille">
+                <h2>Manage and orchestrate</h2>
+            </span>
+            <span>
+                <img class="cadenas-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i2.png'; ?>" alt="icone cadenas">
+                <h2>Dispatch powerd elements</h2>
+            </span>
+            <span>
+                <img class="fromage-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i3.png'; ?>" alt="icone fromage">
+                <h2>Manage and orchestrats</h2>
+            </span>
+            <span>
+                <img class="sheet-icon" src="<?php echo get_template_directory_uri() . '/assets/images/i1.png'; ?>" alt="icone feuille">
+                <h2>Manage and orchestrats</h2>
+            </span>
+        </div>
+
+        <a href="#">Découvrir la solution</a>            
+        
     </div>
 
     <div class="left-propilot-container">

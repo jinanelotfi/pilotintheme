@@ -10,4 +10,178 @@
             color: var(--bleu-ciel);
         }
     }
+// First card
+    .first-white-container {
+        display: flex;
+        margin: 0 5rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid green;
+        background: var(--white);
+        border-radius: 25px;
+        color: var(--dark-blue);
+        padding: 3rem 5rem;
+
+        .right-data-connexion {
+            flex-basis: 50%;
+
+            .title-factory {
+                padding-right: 8rem;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img {
+                        height: 50px;
+                        width: auto;
+                    }
+
+                    h3 {
+                        font-size: 48px;
+                        text-transform: uppercase;
+                        gap: 1rem;
+                        margin: 1rem;
+                        color: var(--black);
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .list-icones-factory {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 3rem;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin: 1rem;
+
+                    h2 {
+                        font-size: 24px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+
+            a {
+                border: 1px solid purple;
+                text-decoration: none;
+                color: var(--dark-blue);
+                background: var(--saumon);
+                border-radius: 30px;
+                padding: 13px 20px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .left-data-connexion-image {
+            flex-basis: 50%;
+        }
+    }
+
+// Second card
+    .second-white-container {
+        display: flex;
+        margin: 3rem 5rem 10rem 5rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid green;
+        background: var(--white);
+        border-radius: 25px;
+        color: var(--dark-blue);
+        overflow: hidden;
+
+        .right-data-connexion {
+            flex-basis: 50%;
+            padding: 6rem;
+
+            .title-factory {
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img {
+                        height: 50px;
+                        width: auto;
+                    }
+
+                    h3 {
+                        font-size: 48px;
+                        text-transform: uppercase;
+                        gap: 1rem;
+                        margin: 1rem;
+                        color: var(--black);
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .list-icones-factory {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 3rem;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin: 1rem;
+
+                    h2 {
+                        font-size: 24px;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+
+            a {
+                border: 1px solid purple;
+                text-decoration: none;
+                color: var(--dark-blue);
+                background: var(--saumon);
+                border-radius: 30px;
+                padding: 13px 20px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .left-propilot-container {
+            flex-basis: 50%;
+
+            .ellipse-image {
+                position: relative;
+                z-index: 0;
+                width: auto;
+                height: 838px;
+            }
+
+            .group-card-image {
+                width: auto;
+                height: 605px;
+                position: absolute;
+                z-index: 5;
+                top: 245rem;
+            }
+
+            
+        }
+    }
 }
