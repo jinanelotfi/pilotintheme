@@ -1,6 +1,7 @@
 @import "colors";
 @import "fonts";
 @import "keyframes";
+@import "navigation";
 
 
 
@@ -11,9 +12,9 @@
 
 body {
     font-family: 'Porpora', sans-serif;
-    color: var(--black);
+    color: var(--white);
     font-size: 14px;
-    background-color: var(--dark-black);
+    background: var(--bg-bleu);
     margin: 0;
     display: flex;
     flex-direction: column;
