@@ -1,0 +1,98 @@
+.section-four-container {
+    background: var(--white);
+    color: var(--dark-blue);
+    padding: 8rem 5rem;
+
+    h2 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 60px;
+
+    }
+// First card
+    .first-white-container {
+        display: flex;
+        margin: 5rem auto;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid green;
+        background: var(--dark-blue);
+        border-radius: 25px;
+        color: var(--dark-blue);
+        width: 100%;
+        // gap: 2rem;
+
+        .right-data-connexion {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 4rem 4rem 4rem 2rem;
+            flex-basis: 40%;
+
+            .title-factory {
+                display: flex;
+                flex-direction: column;
+
+                // span {
+                //     display: flex;
+                //     align-items: center;
+                //     gap: 1rem;
+
+                    img {
+                        height: auto;
+                        width: 108px;
+                    }
+
+                    h3 {
+                        color: var(--bleu-ciel);
+                        font-size: 20px;
+                        gap: 1rem;
+                        margin: 2rem 0;
+                    }
+
+                    p {
+                        font-size: 36px;
+                        color: var(--white);
+                    }
+                // }
+            }
+
+            .arrow {
+                gap: 1rem;
+                display: flex;
+            }
+
+            .dots {
+                display: flex;
+                padding: 0;
+                margin-top: 3rem;
+            }
+
+            .dot {
+                margin-inline: 7px;
+                width: 13px;
+                height: 13px;
+                background-color: #ffffff00;
+                border: 3px solid var(--grey);
+                border-radius: 100%;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+            }
+            .dot-selected {
+                background-color: var(--bleu-ciel);
+            }
+        }
+
+        .left-data-connexion-image {
+            flex-basis: 60%;
+            // width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 25px 0 0 25px;
+                height: 703px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

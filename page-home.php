@@ -17,6 +17,18 @@
         <?php get_template_part('templates/section-3'); ?>
     </article>
 
+    <!-- Section 4 -->
+    <article class="section-four-container">
+        <?php get_template_part('templates/section-4'); ?>
+    </article>
+
+    <!-- Section 5 Article-->
+
+    <article class="section-five-container">
+        <?php get_template_part('templates/section-5'); ?>
+    </article>
+    
+
 
 
 

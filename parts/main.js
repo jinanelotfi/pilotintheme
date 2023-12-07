@@ -29,5 +29,86 @@ function toggleNav() {
   navigation.classList.toggle("active")
 }
 
+// Réglages du Carrousel
+
+const slides = [
+	{
+		"image":"./wp-content/themes/pilotintheme/assets/images/carrousel1.png",
+    "title": "Thierry Soubestre",
+    "subtitle": "In a few weeks, 5 critical financial data sources were integrated and information is now available every day.",
+    "chartIcon": "./wp-content/themes/pilotintheme/assets/images/ekki-logo.png"
+	},
+	{
+    "image":"./wp-content/themes/pilotintheme/assets/images/carrousel2.png",
+    "title": "Bruno Parent",
+    "subtitle": "With propilot, we are able to share information in real time and use this effectively to steer the covid19 recovery plan across all ministries",
+    "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bruno-logo.png"
+	},
+	{
+		"image":"./wp-content/themes/pilotintheme/assets/images/carrousel3.png",
+    "title": "Hervé Gouëzel",
+    "subtitle": "The solutions offered by Pilot'in let us keep control of our plan. In the end, we were able to largely surpass our initial objectives.",
+    "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bnp-logo.png"
+	}
+]
 
 
+// Manipulation des points
+function createDots() {
+  const dotList = document.querySelector('.dots');
+  for (let i = 0; i < slides.length; i++) {
+    const point = document.createElement('li');
+    point.classList.add('dot');
+    dotList.appendChild(point);
+  }
+  dotList.querySelector('.dot').classList.add('dot-selected');
+}
+
+function updateDots(index) {
+  const dotList = document.querySelector('.dots');
+  const currentPoint = dotList.querySelector('.dot-selected');
+  currentPoint.classList.remove('dot-selected');
+
+  const newPoint = dotList.children[index];
+  newPoint.classList.add('dot-selected');
+}
+
+// Mise à jour du contenu
+function updateContent(index) {
+  const currentSlide = slides[index];
+  const image = document.querySelector('.banner-img');
+  const carouselContent = document.querySelector('.title-factory .carousel-content');
+
+  image.src = currentSlide.image;
+  carouselContent.querySelector('.chart-line-icon').src = currentSlide.chartIcon;
+  carouselContent.querySelector('h3').innerHTML = currentSlide.title;
+  carouselContent.querySelector('p').innerHTML = currentSlide.subtitle;
+}
+
+// Eventlisteners sur les flèches
+function addArrowEventListeners() {
+  const arrowLeft = document.querySelector(".arrow-left");
+  const arrowRight = document.querySelector(".arrow-right");
+
+  arrowLeft.addEventListener("click", () => {
+    updateArrowClick(-1);
+  });
+
+  arrowRight.addEventListener("click", () => {
+    updateArrowClick(1);
+  });
+}
+
+function updateArrowClick(direction) {
+  const dotList = document.querySelector('.dots');
+  const currentPoint = dotList.querySelector('.dot-selected');
+  const currentIndex = Array.from(dotList.children).indexOf(currentPoint);
+  const nextIndex = (currentIndex + direction + slides.length) % slides.length;
+
+  updateDots(nextIndex);
+  updateContent(nextIndex);
+}
+
+// Initialisation
+createDots();
+addArrowEventListeners();
