@@ -1,0 +1,98 @@
+.section-five-container {
+    background: var(--white);
+    color: var(--dark-blue);
+    padding: 0 5rem;
+
+    .title-article {
+        padding: 0 15rem 1rem;
+
+        h2 {
+            margin: 0 auto 2rem;
+            text-align: center;
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+        padding-bottom: 5rem;
+
+        .cards-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 23rem;
+            border-radius: 15px;
+            background: var(--bg-raye);
+            height: 31rem;
+            border: 1px solid var(--grey);
+            padding: 2rem 1rem;
+
+            .info-block {
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                ul {
+                    padding-left: 0;
+                    margin: 3rem auto;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            border: 1px solid var(--bleu-ciel);
+                            text-decoration: none;
+                            color: var(--bleu-ciel);
+                            border-radius: 5px;
+                            padding: 13px 20px;
+                            font-size: 14px;
+                            width: 50%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .fleche-card {
+                display: flex;
+
+                .auteur {
+                    display: flex;
+                    gap: 1rem;
+                }
+            }
+        }    
+    }
+
+    .bouton-page {
+        border: 1px solid purple;
+        text-decoration: none;
+        color: var(--dark-blue);
+        background: var(--bleu-ciel);
+        border-radius: 30px;
+        padding: 13px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        align-items: center;
+        margin: 0 auto;
+    }
+}

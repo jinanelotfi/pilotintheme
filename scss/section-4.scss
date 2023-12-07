@@ -1,7 +1,7 @@
 .section-four-container {
     background: var(--white);
     color: var(--dark-blue);
-    padding: 8rem 5rem;
+    padding: 8rem 5rem 2rem;
 
     h2 {
         margin: 0 auto;
@@ -20,7 +20,8 @@
         border-radius: 25px;
         color: var(--dark-blue);
         width: 100%;
-        // gap: 2rem;
+        z-index: 5;
+        position: relative;
 
         .right-data-connexion {
             width: 100%;
@@ -94,5 +95,19 @@
                 object-position: center;
             }
         }
+    }
+
+    .parallaxe-blue-only {
+        position: absolute;
+        top: 329rem;
+        left: 0;
+        z-index: 7;
+    }
+
+    .parallaxe-grey {
+        position: absolute;
+        top: 300rem;
+        left: 50rem;
+        z-index: 0;
     }
 }
