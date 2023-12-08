@@ -454,6 +454,60 @@
     align-items: center;
     margin: 0 auto; }
 
+.section-six-container {
+  background: var(--white);
+  color: var(--dark-blue);
+  padding: 1rem 5rem; }
+  .section-six-container .second-white-container {
+    display: flex;
+    margin: 7rem auto;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px solid green;
+    background: var(--dark-blue);
+    border-radius: 10px;
+    color: var(--white);
+    width: 100%;
+    gap: 2rem;
+    overflow: hidden;
+    background-image: url("../../assets/images/image-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0% center;
+    height: 497px; }
+    .section-six-container .second-white-container .left-propilot-connexion {
+      flex-basis: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 4rem;
+      height: inherit;
+      justify-content: center; }
+      .section-six-container .second-white-container .left-propilot-connexion .title-propilot {
+        display: flex;
+        flex-direction: column; }
+        .section-six-container .second-white-container .left-propilot-connexion .title-propilot h2 {
+          font-size: 38px;
+          color: var(--bleu-ciel);
+          margin: 0; }
+        .section-six-container .second-white-container .left-propilot-connexion .title-propilot h3 {
+          font-size: 32px;
+          font-weight: 500; }
+      .section-six-container .second-white-container .left-propilot-connexion a {
+        border: 1px solid purple;
+        text-decoration: none;
+        color: var(--dark-blue);
+        background: var(--saumon);
+        border-radius: 30px;
+        padding: 13px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        width: 40%;
+        text-align: center; }
+    .section-six-container .second-white-container .right-propilot-container {
+      flex-basis: 50%;
+      width: 100%;
+      padding: 4rem 0 0 0; }
+
 * {
   box-sizing: border-box; }
 

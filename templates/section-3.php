@@ -80,7 +80,6 @@
 
     <div class="right-propilot-container">
         <img class="group-card-image" src="<?php echo get_template_directory_uri() . '/assets/images/group.png'; ?>" alt="image carte groupe">
-        <!-- <img class="ellipse-image" src="< echo get_template_directory_uri() . '/assets/images/ellipse.png'; ?>" alt="image ellipse"> -->
     </div>
 </div>
 <div class="shape-divider">
