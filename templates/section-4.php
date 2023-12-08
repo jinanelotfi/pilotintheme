@@ -31,7 +31,7 @@ They trust Pilot'in.<br>Why not you?
     </div>
 </div>
 <div class="parallaxe-blue-only">
-    <img class="parallaxe-duo-color-image" src="<?php echo get_template_directory_uri() . '/assets/images/parallaxe-blue-only.svg'; ?>" alt="formes parallaxe">
+    <img class="parallaxe-duo-color-image" src="<?php echo get_template_directory_uri() . '/assets/images/parallaxe-blue-only.svg'; ?>" alt="formes parallaxe" data-start="transform: translateY(200%)" data-end="transform: translateY(0%)">
 </div>
 <div class="parallaxe-grey">
     <img class="parallaxe-duo-color-image" src="<?php echo get_template_directory_uri() . '/assets/images/parallaxe-grey.png'; ?>" alt="formes parallaxe">
