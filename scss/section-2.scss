@@ -6,13 +6,11 @@
     .text-container {
         padding: 4rem 11rem 20rem;
         display: flex;
-        border: 1px solid blue;
         align-items: flex-start;
     
         .left-title {
             flex-basis: 50%;
             width: 100%;
-            border: 1px solid green;
 
             h2 {
                 font-size: 60px;
@@ -24,7 +22,6 @@
         .right-text {
             flex-basis: 50%;
             width: 100%;
-            border: 1px solid black;
 
             p {
                 margin: 0 0 3rem;
@@ -32,7 +29,6 @@
             }
 
             a {
-                border: 1px solid purple;
                 text-decoration: none;
                 color: var(--dark-blue);
                 background: var(--bleu-ciel);
@@ -47,7 +43,6 @@
 
     .image-between-sections {
         padding: 0 11rem;
-        border: 1px solid red;
         position: absolute;
         margin-top: -14rem;
 

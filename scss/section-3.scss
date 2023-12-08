@@ -16,7 +16,6 @@
         margin: 7rem auto;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid green;
         background: var(--white);
         border-radius: 25px;
         color: var(--dark-blue);
@@ -79,7 +78,6 @@
             }
 
             a {
-                border: 1px solid purple;
                 text-decoration: none;
                 color: var(--dark-blue);
                 background: var(--saumon);
@@ -109,7 +107,6 @@
         margin: 7rem auto;
         justify-content: space-between;
         align-items: flex-end;
-        border: 1px solid green;
         background: var(--white);
         border-radius: 25px;
         color: var(--dark-blue);
@@ -176,7 +173,6 @@
             }
 
             a {
-                border: 1px solid purple;
                 text-decoration: none;
                 color: var(--dark-blue);
                 background: var(--saumon);
@@ -204,7 +200,6 @@
 
     .shape-divider {
         display: flex;
-        border: 1px solid red;
         justify-content: center;
         margin: -1px
     }

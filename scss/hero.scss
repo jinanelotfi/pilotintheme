@@ -3,14 +3,12 @@
 
     .hero-container {
         display: flex;
-        border: 1px solid red;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         margin: 7rem auto;
 
         .left-talk {
-            border: 1px solid yellow;
             flex-basis: 55%;
             width: 100%;
 
@@ -32,14 +30,12 @@
             }
 
             .logos-entreprises {
-                border: 1px solid green;
                 justify-content: space-between;
                 display: flex;
                 margin-top: 3rem;
             }
 
             a {
-                border: 1px solid purple;
                 text-decoration: none;
                 color: var(--dark-blue);
                 background: var(--saumon);
@@ -54,7 +50,6 @@
         .right-talk {
             flex-basis: 45%;
             width: 100%;
-            border: 1px solid green;
 
             img {
                 width: 100%;
@@ -64,14 +59,12 @@
 
     .data-cloud {
         display: flex;
-        border: 1px solid pink;
         justify-content: center;
         margin-bottom: 2rem;
     }
 
     .shape-divider {
         display: flex;
-        border: 1px solid red;
         justify-content: center;
         margin: -1px
     }
