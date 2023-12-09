@@ -32,9 +32,6 @@
         <?php get_template_part('templates/section-6'); ?>
     </article>
 
-
-
-
 </main>
 
 <?php get_footer(); ?>

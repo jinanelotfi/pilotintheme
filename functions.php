@@ -12,6 +12,12 @@ function theme_enqueue_styles() {
 
 }
 
+function add_custom_scripts() {
+    wp_enqueue_script('jquery');
+}
+
+
+
 
 function pilotintheme_supports() {
 
@@ -84,3 +90,4 @@ add_action('after_setup_theme', 'pilotintheme_supports');
 add_filter('nav_menu_css_class', 'pilotintheme_menu_class');
 add_filter('nav_menu_link_attributes', 'pilotintheme_menu__link_class');
 add_action('save_post', 'save_custom_css_class_field');
+add_action('wp_enqueue_scripts', 'add_custom_scripts');
