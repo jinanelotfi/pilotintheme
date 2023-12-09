@@ -19,44 +19,14 @@ pinElements.forEach(pinElement => {
 });
 
 // Réglages menu dropdown
-// document.addEventListener('DOMContentLoaded', function () {
-//   var hasSubmenus = document.querySelectorAll('.has-submenu');
+jQuery(document).ready(function($) {
+  // Toggle submenu on click
+  $('.menu-parent').click(function() {
+      $(this).find('.submenu').toggle();
+      console.log('coucou');
+  });
+});
 
-//   hasSubmenus.forEach(function (element) {
-//       element.addEventListener('click', function (event) {
-//           event.preventDefault(); // Empêche la redirection par défaut
-
-//           var submenu = this.querySelector('.submenu');
-//           closeOtherSubmenus(this); // Ferme les autres sous-menus
-//           toggleVisibility(submenu); // Bascule la visibilité du sous-menu
-//       });
-//   });
-
-//   document.addEventListener('click', function (event) {
-//       var clickedElement = event.target;
-
-//       if (!clickedElement.closest('.has-submenu')) {
-//           var allSubmenus = document.querySelectorAll('.submenu');
-//           allSubmenus.forEach(function (submenu) {
-//               submenu.style.display = 'none'; // Cache tous les sous-menus
-//           });
-//       }
-//   });
-
-//   function closeOtherSubmenus(currentElement) {
-//       var allSubmenus = document.querySelectorAll('.submenu');
-//       allSubmenus.forEach(function (submenu) {
-//           if (submenu !== currentElement.querySelector('.submenu')) {
-//               submenu.style.display = 'none'; // Cache les autres sous-menus
-//           }
-//       });
-//   }
-
-//   function toggleVisibility(element) {
-//       var currentDisplay = window.getComputedStyle(element).display;
-//       element.style.display = currentDisplay === 'none' ? 'flex' : 'none';
-//   }
-// });
 
 
 
