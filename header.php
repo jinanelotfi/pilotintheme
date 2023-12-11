@@ -28,7 +28,7 @@
         </div>    -->
         
 
-        <nav class="container-navigation navbar navbar-expand-lg navbar-light bg-light navbar-megamenu" id="site-navigation">
+        <nav class="container-navigation navbar navbar-expand-lg navbar-light bg-light navbar-megamenu header-bootstrap" id="site-navigation">
             <?php
                 if(function_exists('the_custom_logo')) {
                     $custom_logo_id = get_theme_mod('custom_logo');
@@ -87,12 +87,6 @@
             </div>
         </nav>
         
-
-
-
-
-
-
 
 
 
