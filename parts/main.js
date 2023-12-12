@@ -27,8 +27,31 @@
 //   });
 // });
 
+// Get the modal
+var modal = document.getElementById('myModal');
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 
@@ -54,23 +77,23 @@ function toggleNav() {
 
 const slides = [
 	{
-		"image":"./wp-content/themes/pilotintheme/assets/images/carrousel1.png",
+		"video":"./wp-content/themes/pilotintheme/assets/images/video-grogu.mp4",
     "title": "Thierry Soubestre",
     "subtitle": "In a few weeks, 5 critical financial data sources were integrated and information is now available every day.",
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/ekki-logo.png"
 	},
 	{
-    "image":"./wp-content/themes/pilotintheme/assets/images/carrousel2.png",
+    "video":"./wp-content/themes/pilotintheme/assets/images/video-rey.mp4",
     "title": "Bruno Parent",
     "subtitle": "With propilot, we are able to share information in real time and use this effectively to steer the covid19 recovery plan across all ministries",
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bruno-logo.png"
-	},
-	{
-		"image":"./wp-content/themes/pilotintheme/assets/images/carrousel3.png",
-    "title": "Hervé Gouëzel",
-    "subtitle": "The solutions offered by Pilot'in let us keep control of our plan. In the end, we were able to largely surpass our initial objectives.",
-    "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bnp-logo.png"
 	}
+	// {
+	// 	"image":"./wp-content/themes/pilotintheme/assets/images/carrousel3.png",
+  //   "title": "Hervé Gouëzel",
+  //   "subtitle": "The solutions offered by Pilot'in let us keep control of our plan. In the end, we were able to largely surpass our initial objectives.",
+  //   "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bnp-logo.png"
+	// }
 ]
 
 
@@ -97,10 +120,10 @@ function updateDots(index) {
 // Mise à jour du contenu
 function updateContent(index) {
   const currentSlide = slides[index];
-  const image = document.querySelector('.banner-img');
+  const image = document.querySelector('.banner-video');
   const carouselContent = document.querySelector('.title-factory .carousel-content');
 
-  image.src = currentSlide.image;
+  image.src = currentSlide.video;
   carouselContent.querySelector('.chart-line-icon').src = currentSlide.chartIcon;
   carouselContent.querySelector('h3').innerHTML = currentSlide.title;
   carouselContent.querySelector('p').innerHTML = currentSlide.subtitle;

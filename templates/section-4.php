@@ -5,8 +5,29 @@ They trust Pilot'in.<br>Why not you?
 <!-- First card -->
 <div class="first-white-container">
     <div class="left-data-connexion-image">
-        <img class="banner-img" src="<?php echo get_template_directory_uri() . '/assets/images/carrousel1.png'; ?>" alt="vidéo témoignage 1">
+        <!-- <video class="banner-video custom-border" controls>
+            <source src="< echo get_template_directory_uri() . '/assets/images/video-grogu.mp4'; ?>" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de la vidéo.
+        </video> -->
     </div>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">x</span>
+        <video class="banner-video custom-border" controls>
+            <source src="<?php echo get_template_directory_uri() . '/assets/images/video-grogu.mp4'; ?>" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de la vidéo.
+        </video>
+    </div>
+
+    </div>
+
 
     <div class="right-data-connexion">
         <div class="title-factory">

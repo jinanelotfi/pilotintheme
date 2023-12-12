@@ -6,34 +6,115 @@
 #site-navigation {
     background-color: var(--bg-bleu)!important;
 
-    #menu-navigation {
+    &:hover {
+        background: white!important;
 
-        // a {
-        //     color: var(--white);
+        .dropdown-toggle {
+            color: var(--black)!important;
+            text-decoration: none;
+        }
+        .nonmegamenu a {
+            color: var(--black)!important;
+            text-decoration: none;
+        }
 
-        .megamenu {
-            position: static;
-
-            a {
-                color: var(--white);
-            }
-
-            .dropdown-menu.show {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-                padding: 20px;
-                align-items: flex-end;
-                height: 50vh;
-
-                a {
-                    color: var(--dark-blue);
-                }
-            }
+        .navbar-brand img {
+            color: var(--dark-blue)!important;            
         }
     }
 
+    #navbarSupportedContent {
+
+        > a {
+            text-decoration: none;
+            color: var(--black);
+            background: var(--bleu-ciel);
+            border-radius: 30px;
+            padding: 13px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+
+
+        #menu-navigation {
+
+            gap: 4rem;
+    
+            // a {
+            //     color: var(--white);
+            .nonmegamenu {
+                > img {
+                    display: none;
+                }
+                a {
+                    color: var(--white);
+
+
+                }
+            }
+    
+            .megamenu {
+                position: static;
+    
+                > img {
+                    display: none;
+                }
+    
+                a {
+                    color: var(--white);
+
+                    &::after {
+                        display: none;
+                    }
+                }
+    
+                .dropdown-menu.show {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 20px 40px;
+                    align-items: flex-end;
+                    height: 50vh;
+                    margin: 0;
+                    border: none;
+    
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px;
+                        gap: 1rem;
+                    }
+    
+                    img {
+                        width: 25px;
+                        margin-right: 10px;
+                    }
+    
+    
+                    a {
+                        color: var(--bleu-ciel);
+                        font-weight: 600;
+                        
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    }
+                }
+            }
+        }
+
+
+
+
     }
+
+
+
+    
+}
+
+    
     
 
 // }

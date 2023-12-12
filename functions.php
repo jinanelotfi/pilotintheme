@@ -10,13 +10,19 @@ function theme_enqueue_styles() {
     
      wp_enqueue_script('skrollr-init', get_stylesheet_directory_uri() . './parts/skrollr-init.js', array(), filemtime(get_stylesheet_directory() . './parts/skrollr-init.js'), true);
 
+     // Script fontawesome
+    wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/2141edcbd6.js', array(), null);  
+
 }
 
 function add_custom_scripts() {
     wp_enqueue_script('jquery');
 }
-
-
+// Autoriser les fichiers SVG dans l'uploader
+function allow_svg_upload($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
 
 
 function pilotintheme_supports() {
@@ -66,6 +72,7 @@ class WalkerNav extends Walker_Nav_Menu
         $indent = str_repeat("\t", $depth);
         $submenu = ($depth > 0) ? ' sub-menu' : '';
         $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";
+        
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
@@ -82,6 +89,7 @@ class WalkerNav extends Walker_Nav_Menu
             $output .= "<li class=\"divider\"></li>\n";
             unset($classes[$divider_class_position]);
         }
+        
 
         $classes[] = ($args->has_children) ? 'dropdown' : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
@@ -89,14 +97,22 @@ class WalkerNav extends Walker_Nav_Menu
         if ($depth && $args->has_children) {
             $classes[] = 'dropdown-submenu';
         }
+       
 
         $class_names = implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
         $class_names = ' class="'.esc_attr($class_names).'"';
 
         $id = apply_filters('nav_menu_item_id', 'menu-item-'.$item->ID, $item, $args);
         $id = strlen($id) ? ' id="'.esc_attr($id).'"' : '';
-
+        
         $output .= $indent.'<li'.$id.$value.$class_names.$li_attributes.'>';
+        
+        
+
+        // Ajout de la description
+        // if ($depth === 0 && strlen($item->description) > 2) {
+        //     $item_output .= '<span class="parent-description">'.$item->description.'</span>';
+        // }
 
         $attributes = !empty($item->attr_title) ? ' title="'.esc_attr($item->attr_title).'"' : '';
         $attributes .= !empty($item->target) ? ' target="'.esc_attr($item->target).'"' : '';
@@ -112,12 +128,41 @@ class WalkerNav extends Walker_Nav_Menu
             if (strlen($item->attr_title) > 2) {
                 $item_output .= '<h3 class="tit">'.$item->attr_title.'</h3>';
             }
-            // add support for menu item descriptions
-            if (strlen($item->description) > 2) {
+            // // add support for menu item descriptions
+            if ($depth > 0 && strlen($item->description) > 2) {
                 $item_output .= '</a> <span class="sub">'.$item->description.'</span>';
             }
-        $item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
+        $item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <i class="fa-solid fa-chevron-down"></i></a>' : '</a>';
         $item_output .= $args->after;
+
+        // Afficher la description uniquement pour les sous-menus
+        // if ($depth > 0 && strlen($item->description) > 2) {
+        //     $item_output .= '<span class="sub-menu-description">'.$item->description.'</span>';
+        //     }
+        
+        if ($depth > 0 && strlen($item->title) > 2) {
+            $item_output = $args->before;
+            $item_output .= '<a'.$attributes.'>';
+            $item_output .= '<span class="sub-menu-image-title"><img src="wp-content/themes/pilotintheme/assets/images/chart-line-up.png" alt="Description de l\'image" class="votre-classe-image">'. $args->link_before.apply_filters('the_title', $item->title, $item->ID).$args->link_after. '</span>';            
+
+            // $item_output .= '<span class="sub-menu-description"><img src="wp-content/themes/pilotintheme/assets/images/chart-line-up.png" alt="Description de l\'image" class="votre-classe-image">'.$item->title.'</span>';
+            }
+
+            $item_output .= '</a>';
+
+        if ($depth > 0 && strlen($item->description) > 2) {
+            $item_output .= '<span class="sub-menu-description">'.$item->description.'</span>';
+        }
+        
+        // if ($depth === 0 && strlen($item->description) > 2) {
+        //     $item_output .= '<span class="parent-description">'.$item->description.'</span>';
+        // }
+
+            // $item_output .= '</a>';
+            // $item_output .= $args->after;
+    
+
+        
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
@@ -246,6 +291,7 @@ function save_custom_css_class_field($post_id) {
 add_action('after_setup_theme', 'pilotintheme_supports');
 add_filter('nav_menu_css_class', 'pilotintheme_menu_class');
 add_filter('nav_menu_link_attributes', 'pilotintheme_menu__link_class');
+add_filter('upload_mimes', 'allow_svg_upload');
 add_action('save_post', 'save_custom_css_class_field');
 add_action('wp_enqueue_scripts', 'add_custom_scripts');
 add_action('wp_enqueue_scripts', 'pilotintheme_register_assets');
