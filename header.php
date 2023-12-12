@@ -10,16 +10,17 @@
         
 
         <nav class="container-navigation navbar navbar-expand-lg navbar-light bg-light navbar-megamenu header-bootstrap" id="site-navigation">
-            <?php
+            <!-- <
                 if(function_exists('the_custom_logo')) {
                     $custom_logo_id = get_theme_mod('custom_logo');
                     $logo = wp_get_attachment_image_src($custom_logo_id, 'large');
                 }
-            ?>
+            ?> -->
 
 
             <a class="navbar-brand" href="#">
-                <img class="logo-site" src="<?php echo $logo[0] ?>" alt="logo">
+                <!-- <img class="logo-site" src="< echo $logo[0] ?>" alt="logo"> -->
+                <img class="logo-site" src="<?php echo get_template_directory_uri() . '/assets/images/logo.svg'; ?>" alt="logo du site">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>

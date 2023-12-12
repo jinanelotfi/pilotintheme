@@ -34,7 +34,7 @@
             width: 23rem;
             border-radius: 15px;
             background: var(--bg-raye);
-            height: 31rem;
+            // height: 31rem;
             border: 1px solid var(--grey);
             padding: 2rem 1rem;
 
@@ -50,7 +50,7 @@
 
                 ul {
                     padding-left: 0;
-                    margin: 3rem auto;
+                    margin: 0 3rem 3rem 0;
 
                     li {
                         list-style: none;
@@ -71,6 +71,7 @@
 
             .fleche-card {
                 display: flex;
+                gap: 1rem;
 
                 .auteur {
                     display: flex;

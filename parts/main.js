@@ -33,33 +33,30 @@ var modal = document.getElementById('myModal');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
+ // Get the video element
+ var video = document.getElementById('modalVideo');
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
+    video.pause();
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        video.pause();
     }
 }
-
-
-
-
-
-
-
-
 
 
 // Réglages menu hamburger
@@ -78,22 +75,18 @@ function toggleNav() {
 const slides = [
 	{
 		"video":"./wp-content/themes/pilotintheme/assets/images/video-grogu.mp4",
+		"image":"./wp-content/themes/pilotintheme/assets/images/carrousel1.png",
     "title": "Thierry Soubestre",
     "subtitle": "In a few weeks, 5 critical financial data sources were integrated and information is now available every day.",
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/ekki-logo.png"
 	},
 	{
     "video":"./wp-content/themes/pilotintheme/assets/images/video-rey.mp4",
+    "image":"./wp-content/themes/pilotintheme/assets/images/carrousel2.png",
     "title": "Bruno Parent",
     "subtitle": "With propilot, we are able to share information in real time and use this effectively to steer the covid19 recovery plan across all ministries",
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bruno-logo.png"
 	}
-	// {
-	// 	"image":"./wp-content/themes/pilotintheme/assets/images/carrousel3.png",
-  //   "title": "Hervé Gouëzel",
-  //   "subtitle": "The solutions offered by Pilot'in let us keep control of our plan. In the end, we were able to largely surpass our initial objectives.",
-  //   "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bnp-logo.png"
-	// }
 ]
 
 
@@ -120,10 +113,12 @@ function updateDots(index) {
 // Mise à jour du contenu
 function updateContent(index) {
   const currentSlide = slides[index];
-  const image = document.querySelector('.banner-video');
+  const video = document.querySelector('.banner-video');
+  const image = document.querySelector('.banner-img');
   const carouselContent = document.querySelector('.title-factory .carousel-content');
 
-  image.src = currentSlide.video;
+  video.src = currentSlide.video;
+  image.src = currentSlide.image;
   carouselContent.querySelector('.chart-line-icon').src = currentSlide.chartIcon;
   carouselContent.querySelector('h3').innerHTML = currentSlide.title;
   carouselContent.querySelector('p').innerHTML = currentSlide.subtitle;

@@ -1,3 +1,4 @@
+    <?php get_template_part('templates/modale'); ?>
     <footer>
         <?php 
             wp_nav_menu([
