@@ -1,15 +1,21 @@
     <?php get_template_part('templates/modale'); ?>
     <footer>
-        <?php 
+        <div class="footer-p">
+            <p>Pilot'in 2022</p>
+            <?php 
             wp_nav_menu([
                 'theme_location' => 'footer',
                 'container' => false,
                 'menu_class' => 'footer-class',
             ])
-        ?>
-        <div class="footer-p">
-            <p>Pilot'in</p>
+            ?>
         </div>        
+        
+        
+        <div class="footer-flot">
+            <p>Mis à flot par</p>
+            <a href="<?php echo esc_url(home_url('/')); ?>">Pilot'in</a>
+        </div> 
     </footer>
     
     <?php wp_footer() ?>
