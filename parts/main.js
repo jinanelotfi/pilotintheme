@@ -58,18 +58,6 @@ window.onclick = function(event) {
     }
 }
 
-
-// Réglages menu hamburger
-const hamburgerButton = document.querySelector(".nav-toggler")
-const navigation = document.querySelector(".nav-burger")
-
-hamburgerButton.addEventListener("click", toggleNav)
-
-function toggleNav() {
-  hamburgerButton.classList.toggle("active")
-  navigation.classList.toggle("active")
-}
-
 // Réglages du Carrousel
 
 const slides = [

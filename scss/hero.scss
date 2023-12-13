@@ -58,16 +58,73 @@
             }
         }
     }
+    
+}
 
-    .data-cloud {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
+.data-cloud {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+    img {
+        width: 100%;
     }
+}
 
-    .shape-divider {
-        display: flex;
-        justify-content: center;
-        margin: -1px
-    }
+.shape-divider {
+    display: flex;
+    justify-content: center;
+    // margin: -1px;
+    width: 100%;
+}
+
+// Responsive
+@media screen and (max-width: 991px) {
+    .hero {
+        .hero-container {
+            flex-direction: column;
+            gap: 6rem;
+
+            .left-talk {
+                h2 {
+                font-size: 48px;
+                }
+                h1 {
+                    font-size: 16px!important;
+                }
+                .logos-entreprises {
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: center;
+                }
+            }        
+        }    
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        margin: 0 2rem;
+
+        .hero-container {
+            // flex-direction: column;
+            // gap: 6rem;
+
+            .left-talk {
+                h2 {
+                font-size: 26px;
+                margin-right: 0;
+                margin-bottom: 1rem;
+                }
+                h1 {
+                    font-size: 16px!important;
+                    margin-right: 0;
+                }
+                a {
+                    font-size: 14px!important;
+
+                }
+            }        
+        }    
+    }    
 }

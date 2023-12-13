@@ -3,7 +3,7 @@ They trust Pilot'in.<br>Why not you?
 </h2>
 
 <!-- First card -->
-<div class="first-white-container">
+<div class="first-white-container pseudo">
     <img id="myBtn" src="<?php echo get_template_directory_uri() . '/assets/images/play-circle-complet.png'; ?>" alt="icone play">
     <div class="left-data-connexion-image">
         <img class="banner-img" src="<?php echo get_template_directory_uri() . '/assets/images/carrousel1.png'; ?>" alt="vidéo témoignage 1">

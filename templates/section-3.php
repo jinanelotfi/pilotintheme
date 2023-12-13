@@ -82,6 +82,3 @@
         <img class="group-card-image" src="<?php echo get_template_directory_uri() . '/assets/images/group.png'; ?>" alt="image carte groupe">
     </div>
 </div>
-<div class="shape-divider">
-    <img class="shape-divider" src="<?php echo get_template_directory_uri() . '/assets/images/shape-divider.png'; ?>" alt="republique logo">
-</div>

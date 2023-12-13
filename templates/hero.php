@@ -20,9 +20,4 @@
     <img class="illustration-data" src="<?php echo get_template_directory_uri() . '/assets/images/illustration-data-management.png'; ?>" alt="illustration-data image">
     </div>    
 </div>
-<div class="data-cloud">
-    <img class="data-banner" src="<?php echo get_template_directory_uri() . '/assets/images/data-banner.png'; ?>" alt="texte data cloud">
-</div>
-<div class="shape-divider">
-    <img class="shape-divider" src="<?php echo get_template_directory_uri() . '/assets/images/shape-divider.png'; ?>" alt="republique logo">
-</div>
+

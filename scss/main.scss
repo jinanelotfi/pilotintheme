@@ -26,10 +26,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: 100%;
+    height: auto;
 }
 
 main {
+    position: relative;
     // flex: 1;
 }
 

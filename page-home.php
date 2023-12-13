@@ -6,6 +6,12 @@
     <article class="hero">
         <?php get_template_part('templates/hero'); ?>
     </article>
+    <div class="data-cloud">
+        <img class="data-banner" src="<?php echo get_template_directory_uri() . '/assets/images/data-banner.png'; ?>" alt="texte data cloud">
+    </div>
+    <div class="shape-divider">
+        <img class="shape-divider" src="<?php echo get_template_directory_uri() . '/assets/images/shape-divider.png'; ?>" alt="shape divider">
+    </div>
 
     <!-- Section 2 -->
     <article class="section-two-container">
@@ -16,6 +22,10 @@
     <article class="section-three-container">
         <?php get_template_part('templates/section-3'); ?>
     </article>
+    <div class="shape-divider">
+        <img class="shape-divider" src="<?php echo get_template_directory_uri() . '/assets/images/shape-divider.png'; ?>" alt="shape divider">
+    </div>
+
 
     <!-- Section 4 Carrousel-->
     <article class="section-four-container">

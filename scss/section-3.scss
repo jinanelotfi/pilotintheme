@@ -85,6 +85,7 @@
                     &:hover {
                         background: var(--bleu-pale);
                         border-radius: 5px;
+                        cur
 
                         img {
                             background-color: var(--white);
@@ -241,11 +242,5 @@
 
             
         }
-    }
-
-    .shape-divider {
-        display: flex;
-        justify-content: center;
-        margin: -1px
     }
 }

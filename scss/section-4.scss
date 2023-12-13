@@ -7,6 +7,8 @@
         margin: 0 auto;
         text-align: center;
         font-size: 60px;
+        position: relative;
+        z-index: 5;
 
     }
 // First card
@@ -114,11 +116,22 @@
 
     .parallaxe-grey {
         position: absolute;
-        top: 300rem;
-        left: 50rem;
+        top: 313rem;
+        right: 0;
         z-index: 0;
     }
 }
+
+// .parallaxe-grey {
+//     position: absolute;
+//     top: 286rem;
+//     left: 47rem;
+//     z-index: 0;
+
+//     img {
+//         width: 45rem;
+//     }
+// }
 
 /* The Modal (background) */
 .modal {
@@ -174,3 +187,15 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+// .pseudo::before {
+//     content: "";
+//   background-image: url("../../assets/images/parallaxe-grey.png");
+//   background-size: cover;
+//   display: block;
+//   width: 48rem;
+//   height: 80rem;
+//   position: absolute;
+//   z-index: -1;
+//   right: -111px;
+// }

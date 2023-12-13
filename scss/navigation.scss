@@ -1,8 +1,3 @@
-.container-burger {
-    display: none;
-}
-
-
 #site-navigation {
     background-color: var(--bg-bleu)!important;
 
@@ -21,6 +16,14 @@
         .navbar-brand img {
             content: url("../../assets/images/logo-bleu.png");            
         }
+
+        .navbar-toggler {
+            border-color: var(--dark-blue);
+        }
+
+        .navbar-toggler-icon img {
+            content: url("../../assets/images/bars-solid-blue.svg"); 
+        }
     }
 
     #navbarSupportedContent {
@@ -32,9 +35,23 @@
             height: 100%;
             align-items: center;
             margin-right: 0!important;
+            width: 100%;
+            justify-content: space-between;
+            
+            
         }
 
         > a {
+            text-decoration: none;
+            color: var(--black);
+            background: var(--bleu-ciel);
+            border-radius: 30px;
+            padding: 13px 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .free {
             text-decoration: none;
             color: var(--black);
             background: var(--bleu-ciel);
@@ -103,6 +120,7 @@
                     height: 50vh;
                     margin: 0;
                     border: none;
+                    background: var(--white);
     
                     li {
                         display: flex;
@@ -136,144 +154,128 @@
                 }
             }
         }
-
-
-
-
     }
 
 
+    // Réglages Menu hambureger
+    .navbar-toggler {
+        border-color: var(--white);
 
-    
+        &:hover {
+            border-color: var(--dark-blue);
+
+            i {
+                color: var(--dark-blue);
+            }
+        }
+
+        span {
+            background-image: none;
+            background-image: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            img {
+                // width: 100%;
+                height: 25px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--white);
+
+                &:hover {
+                    content: url("../../assets/images/bars-solid-blue.svg"); 
+                }
+            }
+        }
+    }    
 }
 
     
-    
-
-// }
-
-
-
-
-// .container-navigation {
-//     display: flex;
-//     width: 100%;
-//     justify-content: space-between;
-//     margin: 2rem 0;
-//     position: relative;
-
-//     img {
-//         display: flex;
-//         flex-basis: 25%;
-//         width: 100%;
-//         height: 50px;
-//         object-fit: contain;
-//         margin-left: 3rem;        
-//     }
-
-//     .main-navigation {
-//         display: flex;
-//         flex-basis: 70%;
-//         justify-content: flex-start;
-//         margin-right: 3rem;
-//         // position: relative;
-
-//         .navbar-nav {
-//             display: flex;
-//             align-items: center;
-//             gap: 3rem;
-//             list-style: none;
-
-//             li {
-//                 position: static;
-//                 cursor: pointer;
-
-//                 // .submenu {
-//                 //     display: none;
-//                 //     // display: flex;
-//                 //     position: absolute;
-//                 //     top: 100%;
-//                 //     left: 0;
-//                 //     background-color: #fff;
-//                 //     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-//                 //     width: 100%;
-//                 //     height: 50vh;
-//                 //     justify-content: space-around;
-//                 //     align-items: flex-end;
-
-//                 //     li {
-//                 //         // padding: 10px;
-//                 //         margin-bottom: 63px;
-
-//                 //         a {
-//                 //             color: var(--dark-blue);
-//                 //             font-size: 16px;
-                
-//                 //         }
-//                 //     }
-
-//                 //     &:hover {
-//                 //         display: flex;
-//                 //         // position: absolute;
-//                 //         // width: 100%;
-//                 //         // left: 0;
-//                 //     }
-//                 // }            
-
-//                 // &:hover > .submenu {
-//                 //     display: flex;
-//                 // }
-//             }
-
-//             a {
-//                 text-decoration: none;
-//                 color: var(--dark-blue);
-//                 font-size: 16px;
-
-//                 &:hover {
-//                     color: var(--rose-gauche);
-//                 }            
-//             }     
-            
-//         }
-
-//         .navbar-nav li:hover .submenu {
-//             // display: flex;
-//         }
-//     }
-
-//     &:hover a {
-//         // background: var(--white);
-//         color: var(--dark-blue);
-
-//         .main-navigation {
-//             // color: var(--dark-blue);
-//         }
-
-//         a {
-//             // color: var(--dark-blue);
-//         }
-//     }
-// }
-
-// Menu burger 
-@media screen and (max-width: 768px) {
+// Responsive
+@media screen and (max-width: 991px) {
     .container-navigation {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
 
-        .logo-site {
-            margin: 0;
+        .navbar-collapse.collapse.show {
+            display: flex;
+            flex-direction: column;
+            height: auto!important;
+            gap: 1rem;
+            padding: 4rem;
+
+            a {
+                // margin-top: 41px;
+            }
+
+            .navbar-nav {
+                margin-left: 0!important;
+                height: auto;
+                gap: 4rem;
+
+                #menu-navigation {
+                    justify-content: center;
+                    align-items: center;
+
+                    .dropdown-menu.show {
+                        margin-top: 20px!important;
+                        // flex-wrap: wrap;
+                    }
+                }
+            }
         }
     } 
 }
 
-@media screen and (max-width: 480px) {
-    .container-burger {
-        display: block;
-    }
-
+@media screen and (max-width: 768px) {
     .container-navigation {
-        display: none;
-    }
+        // flex-wrap: nowrap;
+        // flex-direction: row;
+        // justify-content: space-between;
+
+        .navbar-collapse.collapse.show {
+            // display: flex;
+            // flex-direction: column;
+            // height: auto!important;
+            // gap: 1rem;
+            // padding: 4rem;
+
+            a {
+                // margin-top: 41px;
+            }
+
+            .navbar-nav {
+                // margin-left: 0!important;
+                // height: auto;
+                // gap: 4rem;
+
+                #menu-navigation {
+                    // justify-content: center;
+                    // align-items: center;
+
+                    .dropdown-menu.show {
+                        // margin-top: 20px!important;
+                        // flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+
+@media screen and (max-width: 480px) {
+    // .container-burger {
+    //     display: block;
+    // }
+
+    // .container-navigation {
+    //     display: none;
+    // }
 }
