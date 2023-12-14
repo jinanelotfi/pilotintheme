@@ -27,6 +27,7 @@
             padding: 4rem;
             height: inherit;
             justify-content: center;
+            gap: 2rem;
 
             .title-propilot {
                 display: flex;
@@ -52,7 +53,7 @@
                 padding: 13px 20px;
                 font-size: 18px;
                 font-weight: 600;
-                width: 40%;
+                width: 10rem;
                 text-align: center;
             }
         }
@@ -71,4 +72,176 @@
             
         }
     }
+}
+
+// Responsive 
+@media screen and (max-width: 1024px) {
+    .section-six-container {
+        .second-white-container {
+            .left-propilot-connexion {
+                .title-propilot {
+                    h2 {
+                        font-size: 32px;
+                    }
+
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+
+                a {
+                    // width: 60%;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 991px) {
+    .section-six-container {
+        .second-white-container {
+            .left-propilot-connexion {
+                padding: 4rem 4rem 4rem 1rem;
+
+                .title-propilot {
+                    h2 {
+                        // font-size: 32px;
+                    }
+
+                    h3 {
+                        // font-size: 26px;
+                    }
+                }
+
+                a {
+                    // width: 90%;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .section-six-container {
+        .second-white-container {
+            flex-direction: column-reverse;
+            height: auto;
+            background-position: 0% bottom;
+
+            .left-propilot-connexion {
+                align-items: center;
+                padding: 4rem;
+
+                .title-propilot {
+                    text-align: center;
+                    gap: 2rem;
+                    h2 {
+                        // font-size: 32px;
+                    }
+
+                    h3 {
+                        // font-size: 26px;
+                    }
+                }
+
+                a {
+                    // width: 90%;
+                }                
+            }
+            .right-propilot-container {
+                padding: 0;
+                justify-content: center;
+
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 563px) {
+    .section-six-container {
+        padding: 1rem 2rem;
+
+        .second-white-container {
+            margin: 4rem auto;
+            // flex-direction: column-reverse;
+            // height: auto;
+            // background-position: 0% bottom;
+
+            .left-propilot-connexion {
+                padding: 3rem;
+                // align-items: center;
+                // padding: 4rem;
+
+                .title-propilot {
+                    // text-align: center;
+                    // gap: 2rem;
+                    h2 {
+                        font-size: 26px;
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                }                
+            }
+            .right-propilot-container {
+                // padding: 0;
+                // justify-content: center;
+
+                img {
+                    // margin: 0;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 563px) {
+    .section-six-container {
+        // padding: 1rem 2rem;
+
+        .second-white-container {
+            // margin: 4rem auto;
+            // flex-direction: column-reverse;
+            // height: auto;
+            // background-position: 0% bottom;
+
+            .left-propilot-connexion {
+                padding: 3rem 1rem;
+                // align-items: center;
+                // padding: 4rem;
+
+                .title-propilot {
+                    // text-align: center;
+                    // gap: 2rem;
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+
+                a {
+                    font-size: 14px;
+                }                
+            }
+            .right-propilot-container {
+                // padding: 0;
+                // justify-content: center;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }    
 }
