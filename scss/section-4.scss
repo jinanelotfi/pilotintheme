@@ -157,9 +157,10 @@
     margin: 0;
     padding: 20px;
     // border: 1px solid #888;
-    width: 50%!important; 
+    width: 70%!important;
+    height: auto;
     margin: 0;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px!important;
 
     video {
@@ -172,6 +173,9 @@
 
 /* The Close Button */
 .close {
+    position: absolute;
+    right: 10px;
+    top: 0;
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -188,14 +192,231 @@
     cursor: pointer;
 }
 
-// .pseudo::before {
-//     content: "";
-//   background-image: url("../../assets/images/parallaxe-grey.png");
-//   background-size: cover;
-//   display: block;
-//   width: 48rem;
-//   height: 80rem;
-//   position: absolute;
-//   z-index: -1;
-//   right: -111px;
-// }
+
+// Responsive 
+@media screen and (max-width: 1024px) {
+    .section-four-container {
+        h2 {
+            font-size: 48px;
+        }
+        .first-white-container {
+            .right-data-connexion {
+                .title-factory {
+                    p {
+                        font-size: 24px;
+
+                    }
+                }
+            }
+
+            .left-data-connexion-image {
+                img {
+                    height: 826px;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-four-container {
+        h2 {
+            // font-size: 48px;
+        }
+        .first-white-container {
+            .right-data-connexion {
+                .title-factory {
+                    p {
+                        // font-size: 24px;
+
+                    }
+                }
+            }
+
+            .left-data-connexion-image {
+                img {
+                    // height: 826px;
+                }
+                
+            }
+        }
+
+        .parallaxe-grey {
+            top: 394rem;
+        }
+    }
+
+    .modal-content {
+        width: 80%!important;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .section-four-container {
+        h2 {
+            // font-size: 48px;
+        }
+        .first-white-container {
+            flex-direction: column-reverse;
+
+            > img {
+                bottom: 20%;
+                left: 40%;
+            }
+
+            .right-data-connexion {
+                justify-content: center;
+                align-items: center;
+
+                .title-factory {
+                    p {
+                        // font-size: 24px;
+
+                    }
+                }
+            }
+
+            .left-data-connexion-image {
+                img {
+                    height: auto;
+                    border-radius: 0 0 25px 25px
+                }
+                
+            }
+        }
+        
+        .parallaxe-grey {
+            top: 351rem;
+        }
+
+        .parallaxe-blue-only {
+            top: 376rem;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+    .modal-content {
+        width: 90%!important;
+    }
+
+    
+}
+
+@media screen and (max-width: 563px) {
+    .section-four-container {
+        padding: 3rem 2rem 2rem;
+
+        h2 {
+            font-size: 36px;
+        }
+        .first-white-container {
+            margin: 3rem auto;
+
+            > img {
+                // bottom: 20%;
+                // left: 40%;
+            }
+
+            .right-data-connexion {
+                // justify-content: center;
+                // align-items: center;
+
+                .title-factory {
+                    p {
+                        // font-size: 24px;
+
+                    }
+                }
+            }
+
+            .left-data-connexion-image {
+                img {
+                    // height: auto;
+                    // border-radius: 0 0 25px 25px
+                }
+                
+            }
+        }
+        
+        .parallaxe-grey {
+            top: 318rem;
+        }
+
+        .parallaxe-blue-only {
+            top: 349rem;
+
+            img {
+                // width: 150px;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    .section-four-container {
+        // padding: 3rem 2rem 2rem;
+
+        h2 {
+            font-size: 26px;
+        }
+        .first-white-container {
+            // margin: 3rem auto;
+
+            > img {
+                bottom: 15%;
+                // left: 40%;
+            }
+
+            .right-data-connexion {
+                padding: 2rem;
+                gap: 1rem;
+                // justify-content: center;
+                // align-items: center;
+
+                .title-factory {
+                        text-align: center;
+
+                        p {
+                        font-size: 16px;
+
+                        }                  
+                    
+                }
+
+                .dots {
+                    margin-top: 1rem;
+                }
+            }
+
+            .left-data-connexion-image {
+                img {
+                    // height: auto;
+                    // border-radius: 0 0 25px 25px
+                }
+                
+            }
+        }
+        
+        .parallaxe-grey {
+            top: 289rem;
+        }
+
+        .parallaxe-blue-only {
+            top: 311rem;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    
+}
