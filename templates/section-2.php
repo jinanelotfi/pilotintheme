@@ -15,13 +15,12 @@
         <a href="#">Discover our vision</a>
     </div>
 </div>
-<div class="image-between-sections">
+<div class="image-between-sections pin">
     <img class="computer-screen" src="<?php echo get_template_directory_uri() . '/assets/images/computer-screen.png'; ?>" alt="écran mesures graphiques">
 </div>
 <div class="parallaxe-duo-color">
     <img class="parallaxe-duo-color-image" src="<?php echo get_template_directory_uri() . '/assets/images/parallaxe-shapes-duo-colors.svg'; ?>" alt="formes parallaxe" data-start="transform: translateY(200%)" data-end="transform: translateY(0%)">
 
-    <!-- <img class="title-banner floating" src="< echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" data-start="transform: translateY(0%)" data-end="transform: translateY(150%)"> -->
 
 
 

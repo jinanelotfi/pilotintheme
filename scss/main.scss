@@ -37,3 +37,8 @@ main {
 h1 {
     font-size: 2rem;
 }
+
+
+.appear {
+    animation: appear-grow 1s ease-in-out forwards;
+}

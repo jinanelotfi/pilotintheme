@@ -1,5 +1,5 @@
 
-<div class="second-white-container">   
+<div class="second-white-container pin">   
 
     <div class="right-propilot-container">
         <img class="group-card-image" src="<?php echo get_template_directory_uri() . '/assets/images/charts.png'; ?>" alt="image carte groupe">

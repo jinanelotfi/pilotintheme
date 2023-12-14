@@ -16,6 +16,12 @@
   font-style: normal;
   font-display: swap; }
 
+@keyframes appear-grow {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 #site-navigation {
   background-color: var(--bg-bleu) !important; }
   #site-navigation:hover {
@@ -58,6 +64,10 @@
       padding: 13px 20px;
       font-size: 16px;
       font-weight: 600; }
+      #site-navigation #navbarSupportedContent .free:hover {
+        color: var(--white);
+        background: var(--dark-blue);
+        transform: scale(1.1); }
     #site-navigation #navbarSupportedContent #menu-navigation {
       gap: 4rem; }
       #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu > img {
@@ -202,8 +212,9 @@
       .hero .hero-container .left-talk .logos-entreprises {
         justify-content: space-between;
         display: flex;
-        margin-top: 3rem; }
-      .hero .hero-container .left-talk a {
+        margin-top: 3rem;
+        gap: 1rem; }
+      .hero .hero-container .left-talk .free {
         text-decoration: none;
         color: var(--dark-blue);
         background: var(--saumon);
@@ -212,6 +223,9 @@
         font-size: 16px;
         font-weight: 600;
         text-transform: uppercase; }
+        .hero .hero-container .left-talk .free:hover {
+          color: var(--black);
+          background: var(--bleu-ciel); }
     .hero .hero-container .right-talk {
       flex-basis: 45%;
       width: 100%; }
@@ -284,6 +298,9 @@
         padding: 13px 20px;
         font-size: 18px;
         font-weight: 600; }
+        .section-two-container .text-container .right-text a:hover {
+          color: var(--dark-blue);
+          background: var(--saumon); }
   .section-two-container .image-between-sections {
     padding: 0 11rem;
     position: absolute;
@@ -295,11 +312,17 @@
     top: 43rem;
     right: 0; }
 
+@media screen and (max-width: 1024px) {
+  .section-two-container .text-container {
+    padding: 4rem 11rem 14rem; }
+  .section-two-container .image-between-sections {
+    margin-top: -10rem; } }
+
 @media screen and (max-width: 991px) {
   .section-two-container .text-container {
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 11rem 13rem 4rem; }
+    padding: 4rem 11rem 16rem 4rem; }
     .section-two-container .text-container .left-title h2 {
       font-size: 48px; }
     .section-two-container .text-container .right-text p {
@@ -307,7 +330,7 @@
     .section-two-container .text-container .right-text a {
       font-size: 16px; }
   .section-two-container .image-between-sections {
-    margin-top: -6rem;
+    margin-top: -10rem;
     padding: 0 4rem; } }
 
 @media screen and (max-width: 768px) {
@@ -412,6 +435,9 @@ img {
         font-weight: 600;
         width: 50%;
         text-align: center; }
+        .section-three-container .first-white-container .right-data-connexion a:hover {
+          color: var(--black);
+          background: var(--bleu-ciel); }
     .section-three-container .first-white-container .left-data-connexion-image {
       flex-basis: 50%;
       width: 100%;
@@ -491,8 +517,11 @@ img {
         padding: 13px 20px;
         font-size: 18px;
         font-weight: 600;
-        width: 50%;
+        width: 17rem;
         text-align: center; }
+        .section-three-container .second-white-container .left-propilot-connexion a:hover {
+          color: var(--black);
+          background: var(--bleu-ciel); }
     .section-three-container .second-white-container .right-propilot-container {
       flex-basis: 50%;
       width: 100%;
@@ -502,7 +531,7 @@ img {
 
 @media screen and (max-width: 1024px) {
   .section-three-container {
-    margin: 8rem 5rem 0; }
+    margin: 11rem 5rem 0; }
     .section-three-container h2 {
       font-size: 48px; }
     .section-three-container .second-white-container {
@@ -640,7 +669,8 @@ img {
     .section-four-container .first-white-container > img {
       position: absolute;
       left: 25%;
-      z-index: 10; }
+      z-index: 10;
+      cursor: pointer; }
     .section-four-container .first-white-container .right-data-connexion {
       width: 100%;
       display: flex;
@@ -664,6 +694,8 @@ img {
       .section-four-container .first-white-container .right-data-connexion .arrow {
         gap: 1rem;
         display: flex; }
+        .section-four-container .first-white-container .right-data-connexion .arrow img {
+          cursor: pointer; }
       .section-four-container .first-white-container .right-data-connexion .dots {
         display: flex;
         padding: 0;
@@ -865,6 +897,10 @@ img {
             font-size: 14px;
             width: 50%;
             text-align: center; }
+            .section-five-container .cards-container .cards-right .info-block ul li a:hover {
+              border: 1px solid var(--dark-blue);
+              text-decoration: none;
+              color: var(--dark-blue); }
       .section-five-container .cards-container .cards-right .fleche-card {
         display: flex;
         gap: 1rem; }
@@ -884,6 +920,9 @@ img {
     width: 20%;
     align-items: center;
     margin: 0 auto; }
+    .section-five-container .bouton-page:hover {
+      color: var(--dark-blue);
+      background: var(--saumon); }
 
 @media screen and (max-width: 1024px) {
   .section-five-container .title-article {
@@ -978,6 +1017,9 @@ img {
         font-weight: 600;
         width: 10rem;
         text-align: center; }
+        .section-six-container .second-white-container .left-propilot-connexion a:hover {
+          color: var(--black);
+          background: var(--bleu-ciel); }
     .section-six-container .second-white-container .right-propilot-container {
       flex-basis: 50%;
       width: 100%;
@@ -1056,6 +1098,9 @@ img {
       font-size: 16px;
       color: var(--bleu-ciel);
       font-weight: 500; }
+      .top-footer-container .col-footer a:hover {
+        text-decoration: none;
+        color: var(--dark-blue); }
     .top-footer-container .col-footer p {
       font-size: 18px;
       color: var(--dark-blue);
@@ -1079,6 +1124,9 @@ img {
       align-items: center;
       display: flex;
       justify-content: center; }
+      .top-footer-container .fourth-col .icones-reseaux a:hover {
+        text-decoration: none;
+        color: var(--bleu-ciel); }
 
 footer {
   display: flex !important;
@@ -1180,3 +1228,6 @@ main {
 
 h1 {
   font-size: 2rem; }
+
+.appear {
+  animation: appear-grow 1s ease-in-out forwards; }

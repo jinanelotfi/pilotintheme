@@ -3,18 +3,12 @@ They trust Pilot'in.<br>Why not you?
 </h2>
 
 <!-- First card -->
-<div class="first-white-container pseudo">
+<div class="first-white-container pin">
     <img id="myBtn" src="<?php echo get_template_directory_uri() . '/assets/images/play-circle-complet.png'; ?>" alt="icone play">
     <div class="left-data-connexion-image">
         <img class="banner-img" src="<?php echo get_template_directory_uri() . '/assets/images/carrousel1.png'; ?>" alt="vidéo témoignage 1">
         
-        <!-- <video class="banner-video custom-border" controls>
-            <source src="< echo get_template_directory_uri() . '/assets/images/video-grogu.mp4'; ?>" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de la vidéo.
-        </video> -->
     </div>
-    
-
     
 
 

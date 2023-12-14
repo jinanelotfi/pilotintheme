@@ -55,6 +55,11 @@
                 font-weight: 600;
                 width: 10rem;
                 text-align: center;
+
+                &:hover {
+                    color: var(--black);
+                    background: var(--bleu-ciel);                  
+                }
             }
         }
 

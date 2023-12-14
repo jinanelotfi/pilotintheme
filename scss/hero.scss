@@ -35,9 +35,10 @@
                 justify-content: space-between;
                 display: flex;
                 margin-top: 3rem;
+                gap: 1rem;
             }
 
-            a {
+            .free {
                 text-decoration: none;
                 color: var(--dark-blue);
                 background: var(--saumon);
@@ -46,6 +47,11 @@
                 font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
+
+                &:hover {
+                    color: var(--black);
+                    background: var(--bleu-ciel);                  
+                }
             }
         }
 

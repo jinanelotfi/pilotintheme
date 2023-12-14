@@ -3,7 +3,7 @@
 </h2>
 
 <!-- First card -->
-<div class="first-white-container">
+<div class="first-white-container pin">
     <div class="left-data-connexion-image">
         <img class="datafactory-image" src="<?php echo get_template_directory_uri() . '/assets/images/datafactory.png'; ?>" alt="image data connexions">
     </div>
@@ -44,7 +44,7 @@
 
 <!-- Second card -->
 
-<div class="second-white-container">
+<div class="second-white-container pin">
     <div class="left-propilot-connexion">
         <div class="title-propilot">
             <span>
