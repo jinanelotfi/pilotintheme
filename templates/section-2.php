@@ -20,8 +20,4 @@
 </div>
 <div class="parallaxe-duo-color">
     <img class="parallaxe-duo-color-image" src="<?php echo get_template_directory_uri() . '/assets/images/parallaxe-shapes-duo-colors.svg'; ?>" alt="formes parallaxe" data-start="transform: translateY(200%)" data-end="transform: translateY(0%)">
-
-
-
-
 </div>

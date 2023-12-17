@@ -7,7 +7,6 @@
     <div class="left-data-connexion-image">
         <img class="datafactory-image" src="<?php echo get_template_directory_uri() . '/assets/images/datafactory.png'; ?>" alt="image data connexions">
     </div>
-
     <div class="right-data-connexion">
         <div class="title-factory">
             <span>
@@ -36,9 +35,7 @@
                 <h2>Manage and orchestrats</h2>
             </span>
         </div>
-
-        <a href="#">Découvrir la solution</a>            
-        
+        <a href="#">Découvrir la solution</a>          
     </div>
 </div>
 
@@ -73,11 +70,8 @@
                 <h2>Reward real achiviers</h2>
             </span>
         </div>
-
-        <a href="#">Learn more about ProPilot</a>            
-        
+        <a href="#">Learn more about ProPilot</a>                   
     </div>
-
     <div class="right-propilot-container">
         <img class="group-card-image" src="<?php echo get_template_directory_uri() . '/assets/images/group.png'; ?>" alt="image carte groupe">
     </div>

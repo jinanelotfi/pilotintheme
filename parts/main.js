@@ -66,6 +66,13 @@ const slides = [
     "title": "Bruno Parent",
     "subtitle": "With propilot, we are able to share information in real time and use this effectively to steer the covid19 recovery plan across all ministries",
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bruno-logo.png"
+	},
+  {
+    "video":"./wp-content/themes/pilotintheme/assets/images/avada.mp4",
+    "image":"./wp-content/themes/pilotintheme/assets/images/carrousel3.png",
+    "title": "Hervé Gouëzel",
+    "subtitle": "The solutions offered by Pilot'in let us keep control of our plan. In the end, we were able to largely surpass our initial objectives.",
+    "chartIcon": "./wp-content/themes/pilotintheme/assets/images/bnp-logo.png"
 	}
 ]
 

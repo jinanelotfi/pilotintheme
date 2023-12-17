@@ -72,9 +72,7 @@
 
             img {
                 margin-right: -82px;
-            }
-
-            
+            }            
         }
     }
 }
@@ -93,10 +91,6 @@
                         font-size: 26px;
                     }
                 }
-
-                a {
-                    // width: 60%;
-                }
             }
         }
     }    
@@ -107,20 +101,6 @@
         .second-white-container {
             .left-propilot-connexion {
                 padding: 4rem 4rem 4rem 1rem;
-
-                .title-propilot {
-                    h2 {
-                        // font-size: 32px;
-                    }
-
-                    h3 {
-                        // font-size: 26px;
-                    }
-                }
-
-                a {
-                    // width: 90%;
-                }
             }
         }
     }    
@@ -140,19 +120,9 @@
                 .title-propilot {
                     text-align: center;
                     gap: 2rem;
-                    h2 {
-                        // font-size: 32px;
-                    }
-
-                    h3 {
-                        // font-size: 26px;
-                    }
                 }
-
-                a {
-                    // width: 90%;
-                }                
             }
+
             .right-propilot-container {
                 padding: 0;
                 justify-content: center;
@@ -171,18 +141,11 @@
 
         .second-white-container {
             margin: 4rem auto;
-            // flex-direction: column-reverse;
-            // height: auto;
-            // background-position: 0% bottom;
 
             .left-propilot-connexion {
                 padding: 3rem;
-                // align-items: center;
-                // padding: 4rem;
 
                 .title-propilot {
-                    // text-align: center;
-                    // gap: 2rem;
                     h2 {
                         font-size: 26px;
                     }
@@ -196,36 +159,17 @@
                     font-size: 16px;
                 }                
             }
-            .right-propilot-container {
-                // padding: 0;
-                // justify-content: center;
-
-                img {
-                    // margin: 0;
-                }
-            }
         }
     }    
 }
 
 @media screen and (max-width: 563px) {
     .section-six-container {
-        // padding: 1rem 2rem;
-
         .second-white-container {
-            // margin: 4rem auto;
-            // flex-direction: column-reverse;
-            // height: auto;
-            // background-position: 0% bottom;
-
             .left-propilot-connexion {
                 padding: 3rem 1rem;
-                // align-items: center;
-                // padding: 4rem;
 
                 .title-propilot {
-                    // text-align: center;
-                    // gap: 2rem;
                     h2 {
                         font-size: 22px;
                     }
@@ -239,9 +183,8 @@
                     font-size: 14px;
                 }                
             }
+
             .right-propilot-container {
-                // padding: 0;
-                // justify-content: center;
 
                 img {
                     width: 100%;

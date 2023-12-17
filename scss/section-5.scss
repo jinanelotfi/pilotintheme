@@ -34,7 +34,6 @@
             width: 30%;
             border-radius: 15px;
             background: var(--bg-raye);
-            // height: 31rem;
             border: 1px solid var(--grey);
             padding: 2rem 1rem;
 
@@ -104,7 +103,6 @@
         &:hover {
             color: var(--dark-blue);
             background: var(--saumon);
-
         }
     }
 }
@@ -128,8 +126,6 @@
                         font-size: 16px;
                     }
                 }
-                // width: 100%;
-                // padding: 1rem 2rem;
             }
         }
 
@@ -137,7 +133,6 @@
             width: 30%;
         }
     }
-
 }
 
 @media screen and (max-width: 991px) {
@@ -149,19 +144,13 @@
         .cards-container {
             .cards-right {
                 width: 45%;
-                // padding: 1rem 2rem;
             }
         }
     }
-
 }
 
 @media screen and (max-width: 768px) {
     .section-five-container {
-        .title-article {
-            // padding: 0 7rem 1rem;
-        }
-
         .cards-container {
             .cards-right {
                 width: 100%;
@@ -178,7 +167,6 @@
             width: 50%;
         }
     }
-
 }
 
 @media screen and (max-width: 563px) {
@@ -192,42 +180,20 @@
             p {
                 font-size: 16px;
             }
-            // padding: 0 7rem 1rem;
-        }
-
-        .cards-container {
-            .cards-right {
-                // width: 100%;
-                // padding: 1rem 2rem;
-            }
-
-            .fleche-card {
-                // width: 100%;
-                // justify-content: space-around;
-            }
         }
     }
-
 }
 
 @media screen and (max-width: 480px) {
     .section-five-container {
-        // padding: 0 2rem;
         .title-article {
             h2 {
                 font-size: 26px;
             }
-
-            p {
-                // font-size: 16px;
-            }
-            // padding: 0 7rem 1rem;
         }
 
         .cards-container {
             .cards-right {
-                // width: 100%;
-                // padding: 1rem 2rem;
                 .info-block {
                     text-align: center;
     
@@ -235,14 +201,7 @@
                         margin: 0 0 3rem 0;
                     }
                 }
-            }
-
-            .fleche-card {
-                // width: 100%;
-                // justify-content: space-around;
-            }
-
-            
+            }            
         }
 
         .bouton-page {
@@ -250,5 +209,4 @@
             font-size: 16px;
         }
     }
-
 }

@@ -31,13 +31,11 @@ body {
 
 main {
     position: relative;
-    // flex: 1;
 }
 
 h1 {
     font-size: 2rem;
 }
-
 
 .appear {
     animation: appear-grow 1s ease-in-out forwards;

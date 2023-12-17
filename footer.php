@@ -1,5 +1,4 @@
-    <?php get_template_part('templates/modale'); ?>
-    
+    <?php get_template_part('templates/modale'); ?>    
     
     <div class="top-footer-container">
         <div class="first-col col-footer">
@@ -30,16 +29,10 @@
                 <a href="https://www.linkedin.com/company/pilot-in/?viewAsMember=true"  target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-            </div>
-        
-            
+            </div>                   
         </div>
-
-
     </div>  
-    
-    
-    
+        
     <footer>
         <div class="footer-p">
             <p>Pilot'in 2022</p>
@@ -50,9 +43,7 @@
                 'menu_class' => 'footer-class',
             ])
             ?>
-        </div>        
-        
-        
+        </div>                     
         <div class="footer-flot">
             <p>Mis à flot par</p>
             <a href="<?php echo esc_url(home_url('/')); ?>">Pilot'in</a>

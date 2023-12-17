@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="right-talk">
-    <img class="illustration-data" src="<?php echo get_template_directory_uri() . '/assets/images/illustration-data-management.png'; ?>" alt="illustration-data image">
+        <img class="illustration-data" src="<?php echo get_template_directory_uri() . '/assets/images/illustration-data-management.png'; ?>" alt="illustration-data image">
     </div>    
 </div>
 

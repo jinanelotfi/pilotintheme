@@ -11,7 +11,7 @@
         z-index: 5;
 
     }
-// First card
+    // First card
     .first-white-container {
         display: flex;
         margin: 5rem auto;
@@ -43,28 +43,22 @@
                 display: flex;
                 flex-direction: column;
 
-                // span {
-                //     display: flex;
-                //     align-items: center;
-                //     gap: 1rem;
+                img {
+                    height: auto;
+                    width: 108px;
+                }
 
-                    img {
-                        height: auto;
-                        width: 108px;
-                    }
+                h3 {
+                    color: var(--bleu-ciel);
+                    font-size: 20px;
+                    gap: 1rem;
+                    margin: 2rem 0;
+                }
 
-                    h3 {
-                        color: var(--bleu-ciel);
-                        font-size: 20px;
-                        gap: 1rem;
-                        margin: 2rem 0;
-                    }
-
-                    p {
-                        font-size: 36px;
-                        color: var(--white);
-                    }
-                // }
+                p {
+                    font-size: 36px;
+                    color: var(--white);
+                }
             }
 
             .arrow {
@@ -91,6 +85,7 @@
                 border-radius: 100%;
                 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
             }
+
             .dot-selected {
                 background-color: var(--bleu-ciel);
             }
@@ -99,7 +94,6 @@
         .left-data-connexion-image {
             position: relative;
             flex-basis: 60%;
-            // width: 100%;
 
             img {
                 width: 100%;
@@ -108,7 +102,6 @@
                 object-fit: cover;
                 object-position: center;
             }
-
         }
     }
 
@@ -126,17 +119,6 @@
         z-index: 0;
     }
 }
-
-// .parallaxe-grey {
-//     position: absolute;
-//     top: 286rem;
-//     left: 47rem;
-//     z-index: 0;
-
-//     img {
-//         width: 45rem;
-//     }
-// }
 
 /* The Modal (background) */
 .modal {
@@ -158,10 +140,8 @@
 
 /* Modal Content/Box */
 .modal-content {
-    // background-color: #fefefe;
     margin: 0;
     padding: 20px;
-    // border: 1px solid #888;
     width: 70%!important;
     height: auto;
     margin: 0;
@@ -170,7 +150,6 @@
 
     video {
         display: flex;
-        // width: 50%;
         justify-content: center;
         align-items: center;
     }
@@ -204,12 +183,12 @@
         h2 {
             font-size: 48px;
         }
+
         .first-white-container {
             .right-data-connexion {
                 .title-factory {
                     p {
                         font-size: 24px;
-
                     }
                 }
             }
@@ -217,8 +196,7 @@
             .left-data-connexion-image {
                 img {
                     height: 826px;
-                }
-                
+                }                
             }
         }
     }
@@ -226,27 +204,6 @@
 
 @media screen and (max-width: 991px) {
     .section-four-container {
-        h2 {
-            // font-size: 48px;
-        }
-        .first-white-container {
-            .right-data-connexion {
-                .title-factory {
-                    p {
-                        // font-size: 24px;
-
-                    }
-                }
-            }
-
-            .left-data-connexion-image {
-                img {
-                    // height: 826px;
-                }
-                
-            }
-        }
-
         .parallaxe-grey {
             top: 394rem;
         }
@@ -254,16 +211,11 @@
 
     .modal-content {
         width: 80%!important;
-    }
-
-    
+    }    
 }
 
 @media screen and (max-width: 768px) {
     .section-four-container {
-        h2 {
-            // font-size: 48px;
-        }
         .first-white-container {
             flex-direction: column-reverse;
 
@@ -275,21 +227,13 @@
             .right-data-connexion {
                 justify-content: center;
                 align-items: center;
-
-                .title-factory {
-                    p {
-                        // font-size: 24px;
-
-                    }
-                }
             }
 
             .left-data-connexion-image {
                 img {
                     height: auto;
                     border-radius: 0 0 25px 25px
-                }
-                
+                }                
             }
         }
         
@@ -308,9 +252,7 @@
 
     .modal-content {
         width: 90%!important;
-    }
-
-    
+    }    
 }
 
 @media screen and (max-width: 563px) {
@@ -322,31 +264,6 @@
         }
         .first-white-container {
             margin: 3rem auto;
-
-            > img {
-                // bottom: 20%;
-                // left: 40%;
-            }
-
-            .right-data-connexion {
-                // justify-content: center;
-                // align-items: center;
-
-                .title-factory {
-                    p {
-                        // font-size: 24px;
-
-                    }
-                }
-            }
-
-            .left-data-connexion-image {
-                img {
-                    // height: auto;
-                    // border-radius: 0 0 25px 25px
-                }
-                
-            }
         }
         
         .parallaxe-grey {
@@ -355,58 +272,37 @@
 
         .parallaxe-blue-only {
             top: 349rem;
-
-            img {
-                // width: 150px;
-            }
         }
     }
-
-    
 }
 
 @media screen and (max-width: 480px) {
     .section-four-container {
-        // padding: 3rem 2rem 2rem;
-
         h2 {
             font-size: 26px;
         }
+
         .first-white-container {
-            // margin: 3rem auto;
 
             > img {
                 bottom: 15%;
-                // left: 40%;
             }
 
             .right-data-connexion {
                 padding: 2rem;
                 gap: 1rem;
-                // justify-content: center;
-                // align-items: center;
 
                 .title-factory {
-                        text-align: center;
+                    text-align: center;
 
-                        p {
-                        font-size: 16px;
-
-                        }                  
-                    
+                    p {
+                    font-size: 16px;
+                    }                                      
                 }
 
                 .dots {
                     margin-top: 1rem;
                 }
-            }
-
-            .left-data-connexion-image {
-                img {
-                    // height: auto;
-                    // border-radius: 0 0 25px 25px
-                }
-                
             }
         }
         
@@ -421,7 +317,5 @@
                 width: 100px;
             }
         }
-    }
-
-    
+    }    
 }

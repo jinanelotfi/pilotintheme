@@ -68,60 +68,58 @@
         color: var(--white);
         background: var(--dark-blue);
         transform: scale(1.1); }
-    #site-navigation #navbarSupportedContent #menu-navigation {
-      gap: 4rem; }
-      #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu > img {
+    #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu > img {
+      display: none; }
+    #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu a {
+      color: var(--white);
+      border-radius: 25px;
+      padding: 13px 20px; }
+      #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu a:hover {
+        background: var(--bleu-pale);
+        border-radius: 25px;
+        padding: 13px 20px; }
+    #site-navigation #navbarSupportedContent #menu-navigation .megamenu {
+      position: static; }
+      #site-navigation #navbarSupportedContent #menu-navigation .megamenu > img {
         display: none; }
-      #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu a {
+      #site-navigation #navbarSupportedContent #menu-navigation .megamenu a {
         color: var(--white);
         border-radius: 25px;
         padding: 13px 20px; }
-        #site-navigation #navbarSupportedContent #menu-navigation .nonmegamenu a:hover {
+        #site-navigation #navbarSupportedContent #menu-navigation .megamenu a::after {
+          display: none; }
+        #site-navigation #navbarSupportedContent #menu-navigation .megamenu a:hover {
           background: var(--bleu-pale);
           border-radius: 25px;
           padding: 13px 20px; }
-      #site-navigation #navbarSupportedContent #menu-navigation .megamenu {
-        position: static; }
-        #site-navigation #navbarSupportedContent #menu-navigation .megamenu > img {
-          display: none; }
-        #site-navigation #navbarSupportedContent #menu-navigation .megamenu a {
-          color: var(--white);
-          border-radius: 25px;
-          padding: 13px 20px; }
-          #site-navigation #navbarSupportedContent #menu-navigation .megamenu a::after {
-            display: none; }
-          #site-navigation #navbarSupportedContent #menu-navigation .megamenu a:hover {
-            background: var(--bleu-pale);
-            border-radius: 25px;
-            padding: 13px 20px; }
-        #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show {
-          width: 100%;
+      #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 40px 45px;
+        align-items: flex-end;
+        height: auto;
+        margin: 0;
+        border: none;
+        background: var(--white); }
+        #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show li {
           display: flex;
-          justify-content: space-around;
-          padding: 20px 40px 45px;
-          align-items: flex-end;
-          height: auto;
-          margin: 0;
-          border: none;
-          background: var(--white); }
-          #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show li {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+          flex-direction: column;
+          gap: 1rem;
+          border-radius: 5px;
+          padding: 13px 20px; }
+          #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show li:hover {
+            background: var(--bleu-pale);
             border-radius: 5px;
             padding: 13px 20px; }
-            #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show li:hover {
-              background: var(--bleu-pale);
-              border-radius: 5px;
-              padding: 13px 20px; }
-          #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show img {
-            width: 25px;
-            margin-right: 10px; }
-          #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show a {
-            color: var(--bleu-ciel);
-            font-weight: 600; }
-            #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show a:hover {
-              text-decoration: none; }
+        #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show img {
+          width: 25px;
+          margin-right: 10px; }
+        #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show a {
+          color: var(--bleu-ciel);
+          font-weight: 600; }
+          #site-navigation #navbarSupportedContent #menu-navigation .megamenu .dropdown-menu.show a:hover {
+            text-decoration: none; }
   #site-navigation .navbar-toggler {
     border-color: var(--white); }
     #site-navigation .navbar-toggler:hover {
@@ -417,8 +415,7 @@
           .section-three-container .first-white-container .right-data-connexion .list-icones-factory span:hover {
             background: var(--bleu-pale);
             border-radius: 5px; }
-            .section-three-container .first-white-container .right-data-connexion .list-icones-factory span:hover cur
-img {
+            .section-three-container .first-white-container .right-data-connexion .list-icones-factory span:hover img {
               background-color: var(--white); }
           .section-three-container .first-white-container .right-data-connexion .list-icones-factory span h2 {
             color: var(--dark-blue);

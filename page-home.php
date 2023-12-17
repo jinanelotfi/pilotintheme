@@ -26,13 +26,12 @@
         <img class="shape-divider" src="<?php echo get_template_directory_uri() . '/assets/images/shape-divider.png'; ?>" alt="shape divider">
     </div>
 
-
     <!-- Section 4 Carrousel-->
     <article class="section-four-container">
         <?php get_template_part('templates/section-4'); ?>
     </article>
 
-    <!-- Section 5 Article-->
+    <!-- Section 5 Articles-->
     <article class="section-five-container">
         <?php get_template_part('templates/section-5'); ?>
     </article>

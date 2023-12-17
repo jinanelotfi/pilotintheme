@@ -11,7 +11,8 @@
             color: var(--bleu-ciel);
         }
     }
-// First card
+
+    // First card
     .first-white-container {
         display: flex;
         margin: 7rem auto;
@@ -76,16 +77,11 @@
                         padding: 10px;
                         background: var(--bleu-pale);
                         border-radius: 5px;
-
-                        &:hover {
-                            // background-color: var(--white);
-                        }
                     }
 
                     &:hover {
                         background: var(--bleu-pale);
                         border-radius: 5px;
-                        cur
 
                         img {
                             background-color: var(--white);
@@ -116,7 +112,6 @@
                     color: var(--black);
                     background: var(--bleu-ciel);                  
                 }
-
             }
         }
 
@@ -131,7 +126,7 @@
         }
     }
 
-// Second card
+    // Second card
     .second-white-container {
         display: flex;
         margin: 7rem auto;
@@ -201,10 +196,6 @@
                         padding: 10px;
                         background: var(--bleu-pale);
                         border-radius: 5px;
-
-                        &:hover {
-                            // background-color: var(--white);
-                        }
                     }
 
                     &:hover {
@@ -250,9 +241,7 @@
 
             .group-card-image {
                 width: 100%;
-            }
-
-            
+            }            
         }
     }
 }
@@ -265,6 +254,7 @@
         h2 {
             font-size: 48px;
         }
+
         .second-white-container {
             flex-direction: column;
             background-position: 120% top;
@@ -285,9 +275,6 @@
         }
     }
 }
-  
-
-
 
 @media screen and (max-width: 991px) {
     .section-three-container {
@@ -328,7 +315,6 @@
         }
 
         .second-white-container {
-
             .left-propilot-connexion {
                 justify-content: center;
                 align-items: center;
@@ -343,12 +329,6 @@
                     }
                 }
             }
-
-            .right-propilot-container {
-                // width: auto;
-                // padding: 0;
-                // margin-top: -207px;
-            }
         }
     }
 }
@@ -357,24 +337,9 @@
     .section-three-container {
         margin: 10rem 5rem 0;
 
-        h2 {
-            // font-size: 48px;
-        }
-        // margin: 21rem 5rem 0;
-
         .first-white-container {
-            // margin: 1rem auto;
-            // flex-direction: column-reverse;
-            // justify-content: center;
-            // align-items: center;
-
             .right-data-connexion {
-
-                a {
-                }
-
                 .title-factory {
-
                     span {
                         h3 {
                             font-size: 36px;
@@ -392,9 +357,6 @@
                         font-size: 16px;
                     }                    
                 }
-            }
-
-            .left-data-connexion-image {
             }
         }
 
@@ -416,12 +378,9 @@
                         img {
                             height: 35px!important;
                         }
-
-                        p {
                     }
-                    }
-                    
                 }
+
                 .list-icones-propilot {
                     span {
                         h2 {
@@ -447,7 +406,6 @@
         }
 
         .first-white-container {
-
             .right-data-connexion {
                 padding: 2rem;
                 gap: 0;
@@ -456,85 +414,16 @@
                     font-size: 14px;
                     width: 80%;
                 }
-
-                .title-factory {
-
-                    span {
-                        h3 {
-                        }                        
-
-                        img {
-                            // height: 35px;
-                        }
-                    }
-
-
-                }
-
-                .list-icones-factory {
-                    span h2 {
-                        // font-size: 16px;
-                    }                    
-                }
-            }
-
-            .left-data-connexion-image {
-                // padding: 0 2rem 4rem;
             }
         }
 
         .second-white-container {
-            // background-position: 12% top;
-            // flex-direction: column;
-            // background-position: 120% top;
-            // height: auto;
-            // justify-content: center;
-            // align-items: center;
-            // gap: 0;
-
             .left-propilot-connexion {
                 padding: 2rem;
-                // justify-content: center;
-                // align-items: center;
+
                 a {
                     width: 80%;
-                    // font-size: 16px;
                 }
-                
-                .title-propilot {
-                    // justify-content: center;
-                    // align-items: center;
-
-                    span {
-                        h3 {
-                            // font-size: 36px;
-                        }
-
-                        img {
-                            // height: 35px;
-                        }
-
-
-                        p {
-                        // text-align: center;
-                        // font-size: 16px;
-                    }
-                    }
-                    
-                }
-                .list-icones-propilot {
-                    span {
-                        h2 {
-                            // font-size: 16px;
-                        }
-                    }
-                }
-            }
-
-            .right-propilot-container {
-                // width: auto;
-                // padding: 0;
-                // margin-top: -151px;
             }
         }
     }
@@ -542,34 +431,14 @@
 
 @media screen and (max-width: 480px) {
     .section-three-container {
-        // margin: 8rem 2rem 0;
-
-        h2 {
-            // font-size: 26px;
-        }
-        // margin: 21rem 5rem 0;
-
         .first-white-container {
-            // margin: 1rem auto;
-            // flex-direction: column-reverse;
-            // justify-content: center;
-            // align-items: center;
-
             .right-data-connexion {
-                // padding: 4rem;
-                // justify-content: center;
-                // align-items: center;
-                // padding: 2rem;
-                // gap: 0;
 
                 a {
                     width: 100%;
                 }
 
                 .title-factory {
-                    // justify-content: center;
-                    // align-items: center;
-
                     span {
                         gap: 0;
 
@@ -585,8 +454,6 @@
                             font-size: 14px;
                         }
                     }
-
-
                 }
 
                 .list-icones-factory {
@@ -595,34 +462,15 @@
                     }                    
                 }
             }
-
-            .left-data-connexion-image {
-                // padding: 0 2rem 4rem;
-            }
         }
 
         .second-white-container {
-            // background-position: 12% top;
-            // flex-direction: column;
-            // background-position: 120% top;
-            // height: auto;
-            // justify-content: center;
-            // align-items: center;
-            // gap: 0;
-
             .left-propilot-connexion {
-                // padding: 2rem;
-                // justify-content: center;
-                // align-items: center;
                 a {
                     width: 100%;
-                    // font-size: 16px;
                 }
                 
                 .title-propilot {
-                    // justify-content: center;
-                    // align-items: center;
-
                     span {
                         h3 {
                             font-size: 26px;
@@ -632,14 +480,12 @@
                             height: 27px;
                         }
 
-
                         p {
-                        // text-align: center;
                         font-size: 14px;
+                        }
                     }
-                    }
-                    
                 }
+
                 .list-icones-propilot {
                     span {
                         h2 {
@@ -650,8 +496,6 @@
             }
 
             .right-propilot-container {
-                // width: auto;
-                // padding: 0;
                 margin-top: -127px;
             }
         }

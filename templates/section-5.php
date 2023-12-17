@@ -16,9 +16,7 @@
     <?php if ($query->have_posts()) : ?>
         <div class="cards-container" id="ajax_return">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-                <?php get_template_part('templates/article-card'); ?>
-
-            
+                <?php get_template_part('templates/article-card'); ?>            
             <?php endwhile ?>
         </div>
     <?php else : ?>

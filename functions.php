@@ -24,7 +24,6 @@ function allow_svg_upload($mimes) {
     return $mimes;
 }
 
-
 function pilotintheme_supports() {
 
     add_theme_support('title-tag');
@@ -37,10 +36,8 @@ function pilotintheme_supports() {
     add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
 }
 
-
 function pilotintheme_register_assets () {
     $header_menu_location = 'header';
-
 
     if (has_nav_menu($header_menu_location)) {
         wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css', []);
@@ -63,20 +60,17 @@ function pilotintheme_menu__link_class ($attrs) {
     return $attrs;
 }
 
+// Classe pour le menu
+class WalkerNav extends Walker_Nav_Menu {
 
-
-class WalkerNav extends Walker_Nav_Menu
-{
-    public function start_lvl(&$output, $depth = 0, $args = array())
-    {
+    public function start_lvl(&$output, $depth = 0, $args = array()) {
         $indent = str_repeat("\t", $depth);
         $submenu = ($depth > 0) ? ' sub-menu' : '';
-        $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";
-        
+        $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";        
     }
 
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
-    {
+    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $li_attributes = '';
@@ -88,16 +82,14 @@ class WalkerNav extends Walker_Nav_Menu
         if ($divider_class_position !== false) {
             $output .= "<li class=\"divider\"></li>\n";
             unset($classes[$divider_class_position]);
-        }
-        
+        }       
 
         $classes[] = ($args->has_children) ? 'dropdown' : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
         $classes[] = 'menu-item-'.$item->ID;
         if ($depth && $args->has_children) {
             $classes[] = 'dropdown-submenu';
-        }
-       
+        }     
 
         $class_names = implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
         $class_names = ' class="'.esc_attr($class_names).'"';
@@ -106,13 +98,6 @@ class WalkerNav extends Walker_Nav_Menu
         $id = strlen($id) ? ' id="'.esc_attr($id).'"' : '';
         
         $output .= $indent.'<li'.$id.$value.$class_names.$li_attributes.'>';
-        
-        
-
-        // Ajout de la description
-        // if ($depth === 0 && strlen($item->description) > 2) {
-        //     $item_output .= '<span class="parent-description">'.$item->description.'</span>';
-        // }
 
         $attributes = !empty($item->attr_title) ? ' title="'.esc_attr($item->attr_title).'"' : '';
         $attributes .= !empty($item->target) ? ' target="'.esc_attr($item->target).'"' : '';
@@ -129,23 +114,16 @@ class WalkerNav extends Walker_Nav_Menu
                 $item_output .= '<h3 class="tit">'.$item->attr_title.'</h3>';
             }
             // // add support for menu item descriptions
-            if ($depth > 0 && strlen($item->description) > 2) {
-                $item_output .= '</a> <span class="sub">'.$item->description.'</span>';
-            }
+            // if ($depth > 0 && strlen($item->description) > 2) {
+            //     $item_output .= '</a> <span class="sub">'.$item->description.'</span>';
+            // }
         $item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <i class="fa-solid fa-chevron-down"></i></a>' : '</a>';
         $item_output .= $args->after;
-
-        // Afficher la description uniquement pour les sous-menus
-        // if ($depth > 0 && strlen($item->description) > 2) {
-        //     $item_output .= '<span class="sub-menu-description">'.$item->description.'</span>';
-        //     }
         
         if ($depth > 0 && strlen($item->title) > 2) {
             $item_output = $args->before;
             $item_output .= '<a'.$attributes.'>';
             $item_output .= '<span class="sub-menu-image-title"><img src="wp-content/themes/pilotintheme/assets/images/chart-line-up.png" alt="Description de l\'image" class="votre-classe-image">'. $args->link_before.apply_filters('the_title', $item->title, $item->ID).$args->link_after. '</span>';            
-
-            // $item_output .= '<span class="sub-menu-description"><img src="wp-content/themes/pilotintheme/assets/images/chart-line-up.png" alt="Description de l\'image" class="votre-classe-image">'.$item->title.'</span>';
             }
 
             $item_output .= '</a>';
@@ -153,22 +131,13 @@ class WalkerNav extends Walker_Nav_Menu
         if ($depth > 0 && strlen($item->description) > 2) {
             $item_output .= '<span class="sub-menu-description">'.$item->description.'</span>';
         }
-        
-        // if ($depth === 0 && strlen($item->description) > 2) {
-        //     $item_output .= '<span class="parent-description">'.$item->description.'</span>';
-        // }
-
-            // $item_output .= '</a>';
-            // $item_output .= $args->after;
-    
-
-        
+               
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 
-    public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output)
-    {
+    public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output) {
+
         if (!$element) {
             return;
         }
@@ -225,6 +194,7 @@ function add_custom_menu_fields() {
         'default'
     );
 }
+
 add_action('admin_init', 'add_custom_menu_fields');
 
 
@@ -244,14 +214,8 @@ function save_custom_menu_fields($menu_id, $menu_item_db_id, $menu_item_data) {
         update_post_meta($menu_item_db_id, 'custom_menu_image', sanitize_text_field($_REQUEST['custom_menu_image'][$menu_item_db_id]));
     }
 }
+
 add_action('wp_update_nav_menu_item', 'save_custom_menu_fields', 10, 3);
-
-
-
-
-
-
-
 
 
 // Ajout des champs personnalisés 
@@ -265,6 +229,7 @@ function add_custom_css_class_field() {
         'default'
     );
 }
+
 add_action('add_meta_boxes', 'add_custom_css_class_field');
 
 function custom_css_class_field_callback($post) {
@@ -284,9 +249,6 @@ function save_custom_css_class_field($post_id) {
         );
     }
 }
-
-
-
 
 add_action('after_setup_theme', 'pilotintheme_supports');
 add_filter('nav_menu_css_class', 'pilotintheme_menu_class');

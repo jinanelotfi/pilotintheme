@@ -2,8 +2,6 @@
 .section-two-container {
     background: var(--white);
     color: var(--dark-blue);
-    // margin-top: -1px;
-    
 
     .text-container {
         padding: 4rem 11rem 20rem;
@@ -45,8 +43,7 @@
 
                 }
             }
-        }
-       
+        }       
     }
 
     .image-between-sections {
@@ -71,29 +68,12 @@
     .section-two-container {
         .text-container {
             padding: 4rem 11rem 14rem;
-
-            .left-title {
-                h2 {
-                    // font-size: 48px;
-                }                
-            }
-
-            .right-text {
-                p {
-                    // font-size: 16px;
-                }
-
-                a {
-                    // font-size: 16px;
-                }                
-            }
         }
 
         .image-between-sections {
             margin-top: -10rem;
         }
-    }
-    
+    }    
 }
 
 
@@ -125,32 +105,18 @@
             margin-top: -10rem;
             padding: 0 4rem;
         }
-    }
-    
+    }    
 }
 
 @media screen and (max-width: 768px) {
     .section-two-container {
         .text-container {
             padding: 4rem 7rem 13rem 4rem;
-            // flex-direction: column;
-            // gap: 2rem;
-            // padding: 4rem 11rem 13rem;
-
-            .left-title {
-                h2 {
-                    // font-size: 48px;
-                }                
-            }
 
             .right-text {
                 p {
                     font-size: 14px;
                 }
-
-                a {
-                    // font-size: 16px;
-                }                
             }
         }
 
@@ -161,10 +127,6 @@
                 width: 150px;
             }
         }
-
-        .image-between-sections {
-            // padding: 0 4rem;
-        }
     }
 }
 
@@ -172,26 +134,14 @@
     .section-two-container {
         .text-container {
             padding: 4rem 4rem 9rem 4rem;;
-            // flex-direction: column;
-            // gap: 2rem;
-            // padding: 4rem 11rem 13rem;
 
             .left-title {
                 h2 {
                     font-size: 26px;
                 }                
             }
-
-            .right-text {
-                p {
-                    // font-size: 16px;
-                }
-
-                a {
-                    // font-size: 14px!important;
-                }                
-            }
         }
+
         .parallaxe-duo-color {
             top: 63rem!important;
 
@@ -203,6 +153,5 @@
         .image-between-sections {
             margin-top: -4rem;
         }
-    }
-   
+    }   
 }
