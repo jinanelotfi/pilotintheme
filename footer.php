@@ -11,13 +11,13 @@
             </a>
         </div>
         <div class="second-col col-footer">
-            <h3>Belgium</h3>
-            <p>Boulevard Louis Schmidt 29/71040 Etterbeek, Brussels, Belgium</p>
-            <a href="tel: 000000000"> +33 00000000</a>            
+            <h3>Germany</h3>
+            <p> Inge Beisheim Platz 63, Südergellersen, Germany</p>
+            <a href="tel: 000000000"> +49 00000000</a>            
         </div>
         <div class="third-col col-footer">
             <h3>France</h3>
-            <p>36 avenue Hoche 75008 Paris, France</p>
+            <p>33 rue Pierre Motte, 75008 Paris, France</p>
             <a href="tel: 000000000"> +33 00000000</a> 
         </div>
         <div class="fourth-col col-footer">
@@ -26,7 +26,7 @@
                 <a href="#"  target="_blank">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/pilot-in/?viewAsMember=true"  target="_blank">
+                <a href="#"  target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </div>                   
@@ -35,7 +35,7 @@
         
     <footer>
         <div class="footer-p">
-            <p>Pilot'in 2022</p>
+            <p>Dagin 2023</p>
             <?php 
             wp_nav_menu([
                 'theme_location' => 'footer',
@@ -45,8 +45,8 @@
             ?>
         </div>                     
         <div class="footer-flot">
-            <p>Mis à flot par</p>
-            <a href="<?php echo esc_url(home_url('/')); ?>">Pilot'in</a>
+            <p>Propulsé par</p>
+            <a href="<?php echo esc_url(home_url('/')); ?>">jinanedigital.com</a>
         </div> 
     </footer>
     

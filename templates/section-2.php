@@ -10,7 +10,7 @@
             <br>
             While many companies state they want to be data-driven, most have only begun to scratch the surface in terms of realizing the full potential of this rich resource.<br>
             <br>
-            Pilot'in recognizes the right for organizations to become truly data-driven, moving  from a fragmented view to a global vision and drive their strategy even further. 
+            Dagin recognizes the right for organizations to become truly data-driven, moving  from a fragmented view to a global vision and drive their strategy even further. 
         </p>
         <a href="#">Discover our vision</a>
     </div>

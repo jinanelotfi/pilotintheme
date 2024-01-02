@@ -1,6 +1,10 @@
 #site-navigation {
     background-color: var(--bg-bleu)!important;
 
+    .navbar-brand img {
+        width: 50%;
+    }
+
     &:hover {
         background: white!important;
 
@@ -15,7 +19,7 @@
         }
 
         .navbar-brand img {
-            content: url("../../assets/images/logo-bleu.png");            
+            content: url("../../assets/images/dagin-purple.png");        
         }
 
         .navbar-toggler {
@@ -50,21 +54,67 @@
             font-weight: 600;
         }
 
-        .free {
-            text-decoration: none;
-            color: var(--black);
-            background: var(--bleu-ciel);
-            border-radius: 30px;
-            padding: 13px 20px;
-            font-size: 16px;
-            font-weight: 600;
+        .language-switcher {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
 
-            &:hover {
-                color: var(--white);
-                background: var(--dark-blue);
-                transform: scale(1.1);                
+            .free {
+                text-decoration: none;
+                color: var(--black);
+                background: var(--bleu-ciel);
+                border-radius: 30px;
+                padding: 13px 20px;
+                font-size: 16px;
+                font-weight: 600;
+    
+                &:hover {
+                    color: var(--white);
+                    background: var(--dark-blue);
+                    transform: scale(1.1);                
+                }
             }
-        }
+            
+            .current-language {
+                color: var(--bleu-ciel);
+                border-radius: 30px;
+                padding: 13px 20px;
+            
+                &:hover {
+                    background-color: var(--bleu-pale);
+                }
+
+                .language-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+
+                    li {
+                        padding: 10px;
+                        background-color: #fff;
+                        border-bottom: 1px solid #ccc;
+                    
+                        &:hover {
+                            cursor: pointer;
+                            background-color: var(--bleu-pale);
+                        }
+                    
+                        a {
+                            text-decoration: none;
+                        }
+                      }
+                  }
+              }
+          }
 
         #menu-navigation {
             .nonmegamenu {
@@ -112,7 +162,7 @@
                     width: 100%;
                     display: flex;
                     justify-content: space-around;
-                    padding: 20px 40px 45px;
+                    padding: 100px 40px 45px;
                     align-items: flex-end;
                     height: auto;
                     margin: 0;
@@ -187,7 +237,6 @@
         }
     }    
 }
-
     
 // Responsive
 @media screen and (max-width: 991px) {

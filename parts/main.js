@@ -25,8 +25,8 @@ var modal = document.getElementById('myModal');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
- // Get the video element
- var video = document.getElementById('modalVideo');
+// Get the video element
+var video = document.getElementById('modalVideo');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -61,7 +61,7 @@ const slides = [
     "chartIcon": "./wp-content/themes/pilotintheme/assets/images/ekki-logo.png"
 	},
 	{
-    "video":"./wp-content/themes/pilotintheme/assets/images/video-rey.mp4",
+    "video":"./wp-content/themes/pilotintheme/assets/images/video-grogu2.mp4",
     "image":"./wp-content/themes/pilotintheme/assets/images/carrousel2.png",
     "title": "Bruno Parent",
     "subtitle": "With propilot, we are able to share information in real time and use this effectively to steer the covid19 recovery plan across all ministries",
@@ -117,13 +117,10 @@ function addArrowEventListeners() {
   const arrowRight = document.querySelector(".arrow-right");
 
   arrowLeft.addEventListener("click", () => {
-    console.log('coucou');
     updateArrowClick(-1);
-    console.log('coucou');
   });
 
   arrowRight.addEventListener("click", () => {
-    console.log('coucou');
     updateArrowClick(1);
     
   });
@@ -142,3 +139,35 @@ function updateArrowClick(direction) {
 // Initialisation
 createDots();
 addArrowEventListeners();
+
+
+// bouton langue
+document.addEventListener('DOMContentLoaded', function () {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  const languageMenu = languageSwitcher.querySelector('.language-menu');
+
+  languageSwitcher.addEventListener('click', function () {
+    languageMenu.style.display = (languageMenu.style.display === 'block') ? 'none' : 'block';
+  });
+
+  // Ferme le menu si l'utilisateur clique en dehors
+  document.addEventListener('click', function (event) {
+    if (!languageSwitcher.contains(event.target)) {
+      languageMenu.style.display = 'none';
+    }
+  });
+});
+
+
+// var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+// // Ajoutez un gestionnaire d'événements pour chaque élément
+// dropdownToggles.forEach(function (toggle) {
+//     toggle.addEventListener('click', function () {
+//         var subs = document.querySelectorAll('.sub');
+//         subs.forEach(function (sub) {
+//             sub.style.display = sub.style.display === 'flex' ? 'none' : 'flex';
+//         });
+//     });
+// });
+

@@ -6,9 +6,9 @@ function theme_enqueue_styles() {
     wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/parts/main.js', array(), filemtime(get_stylesheet_directory() . '/parts/main.js'), true);      
     
      // skrollr
-     wp_enqueue_script('skrollr', get_stylesheet_directory_uri() . './parts/skrollr.min.js', array(), filemtime(get_stylesheet_directory() . './parts/skrollr.min.js'), true);wp_enqueue_script('main', get_stylesheet_directory_uri() . './parts/main.js', array(), filemtime(get_stylesheet_directory() . './parts/main.js'), true);
+     wp_enqueue_script('skrollr', get_stylesheet_directory_uri() . '/parts/skrollr.min.js', array(), filemtime(get_stylesheet_directory() . '/parts/skrollr.min.js'), true);
     
-     wp_enqueue_script('skrollr-init', get_stylesheet_directory_uri() . './parts/skrollr-init.js', array(), filemtime(get_stylesheet_directory() . './parts/skrollr-init.js'), true);
+     wp_enqueue_script('skrollr-init', get_stylesheet_directory_uri() . '/parts/skrollr-init.js', array(), filemtime(get_stylesheet_directory() . '/parts/skrollr-init.js'), true);
 
      // Script fontawesome
     wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/2141edcbd6.js', array(), null);  
@@ -63,10 +63,28 @@ function pilotintheme_menu__link_class ($attrs) {
 // Classe pour le menu
 class WalkerNav extends Walker_Nav_Menu {
 
+    private $parentDescription = '';
+    private $parentDescriptionDisplayed = false;
+
     public function start_lvl(&$output, $depth = 0, $args = array()) {
         $indent = str_repeat("\t", $depth);
         $submenu = ($depth > 0) ? ' sub-menu' : '';
+
+        // Affiche la description du parent après l'ouverture de <ul>
+        // if ($depth === 0 && !$this->parentDescriptionDisplayed && strlen($this->parentDescription) > 2) {
+        //     $output .= "$indent<div class=\"sub\">{$this->parentDescription}</div>\n";
+        //     $this->parentDescriptionDisplayed = true;
+        // }
+
+
+
         $output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";        
+
+        // Affiche la description du parent après la balise <ul>
+        // if ($depth === 0 && !$this->parentDescriptionDisplayed && strlen($this->parentDescription) > 2) {
+        //     $output .= "$indent<div class=\"sub\">{$this->parentDescription}</div>\n";
+        //     $this->parentDescriptionDisplayed = true;
+        // }
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
@@ -113,15 +131,43 @@ class WalkerNav extends Walker_Nav_Menu {
             if (strlen($item->attr_title) > 2) {
                 $item_output .= '<h3 class="tit">'.$item->attr_title.'</h3>';
             }
-            // // add support for menu item descriptions
-            // if ($depth > 0 && strlen($item->description) > 2) {
+            // // // add support for menu item descriptions
+            // if (strlen($item->description) > 2) {
             //     $item_output .= '</a> <span class="sub">'.$item->description.'</span>';
             // }
+
+        // variable pour stocker la description du parent
+        
+        // Attribuez la description du parent à la variable $parentDescription
+        // if ($depth === 0 && !$this->parentDescriptionDisplayed && strlen($item->description) > 2) {
+        //     $this->parentDescription = $item->description;
+        //     $this->parentDescriptionDisplayed = true;
+        // }
+
+        // Utilisez $this->parentDescription pour la description du parent
+        // if ($depth > 0 && strlen($this->parentDescription) > 2) {
+        //     $item_output .= '<span class="sub">'.$this->parentDescription.'</span>';
+        // }
+
+        // Utilisez $item->description pour la description des enfants
+        // if ($depth > 0 && strlen($item->description) > 2) {
+        //     $item_output .= '<span class="sub-menu-description">'.$item->description.'</span>';
+        // }
+
+
+
+        
         $item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <i class="fa-solid fa-chevron-down"></i></a>' : '</a>';
         $item_output .= $args->after;
-        
+
+
         if ($depth > 0 && strlen($item->title) > 2) {
             $item_output = $args->before;
+
+            // modif ici
+            // $item_output .= '<div class="sub">'.$this->parentDescription.'</div>';
+            // fin modif
+
             $item_output .= '<a'.$attributes.'>';
             $item_output .= '<span class="sub-menu-image-title"><img src="wp-content/themes/pilotintheme/assets/images/chart-line-up.png" alt="Description de l\'image" class="votre-classe-image">'. $args->link_before.apply_filters('the_title', $item->title, $item->ID).$args->link_after. '</span>';            
             }
@@ -174,11 +220,20 @@ class WalkerNav extends Walker_Nav_Menu {
             //end the child delimiter
           $cb_args = array_merge(array(&$output, $depth), $args);
             call_user_func_array(array($this, 'end_lvl'), $cb_args);
+
+            // Affiche la description du parent juste après la fermeture de </ul>
+            // if ($depth === 0 && !$this->parentDescriptionDisplayed && strlen($this->parentDescription) > 2) {
+            //     $output .= "$indent<div class=\"sub\">{$this->parentDescription}</div>\n";
+            //     $this->parentDescriptionDisplayed = true;
+            // }
         }
 
         //end this element
         $cb_args = array_merge(array(&$output, $element, $depth), $args);
         call_user_func_array(array($this, 'end_el'), $cb_args);
+        
+
+        
     }
 }
 

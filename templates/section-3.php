@@ -46,7 +46,7 @@
         <div class="title-propilot">
             <span>
                 <img class="chart-line-icon" src="<?php echo get_template_directory_uri() . '/assets/images/chart-line-up.png'; ?>" alt="image graphique icone">
-                <h3>Propilot</h3>
+                <h3>Prodag</h3>
             </span>
             <span>
                 <p>Plan, do, check and align all your strategic plans in one single platform designed and built for modern and efficient organizations. No more spreadsheets sent via emails or time wasted for reconciliation. Focus on what really matters, achieving your goals. </p>
@@ -70,7 +70,7 @@
                 <h2>Reward real achiviers</h2>
             </span>
         </div>
-        <a href="#">Learn more about ProPilot</a>                   
+        <a href="#">Learn more about ProDag</a>                   
     </div>
     <div class="right-propilot-container">
         <img class="group-card-image" src="<?php echo get_template_directory_uri() . '/assets/images/group.png'; ?>" alt="image carte groupe">
